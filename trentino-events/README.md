@@ -1,11 +1,11 @@
-Fusepool P3 XSLT Transformer Configuration
+Events Transformer Configuration
 ==========================================
 
 The XSLT transformer takes as input xml data and the url of a xslt template and transforms the data in RDF according to the rulse specified in the XSLT file events-vt.xsl. The input data is available online from the link
 
     http://www.visittrentino.it/media/eventi/eventi.xml
 
-The data are about the events in the Province of Trento. The vocabulary used in the mapping are  
+The data are about the events in the Province of Trento. The vocabularies used in the mapping are  
 
     rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     rdfs <http://www.w3.org/2000/01/rdf-schema#>  
