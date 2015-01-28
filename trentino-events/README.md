@@ -17,13 +17,13 @@ For each event the following information are extracted and mapped to RDF
 - Title of the events (English and Italian)  
 - Description of the event (English and Italian)  
 - Address  
-- Geographic coordinate (lat, long)  
+- Geographic coordinates (lat, long)  
 - Start and end dates  
 - Organizer
 
 The xml data must be sent to the transformer via HTTP POST with the url of the XSLT file as parameter. If the xslt file is in a local folder (e.g. /home/user/ ) run the command  
 
-    curl -i -X POST -H "Content-Type: application/xml" -T foo.xml http://localhost:7100?xslt=file:///home/user/foo.xsl
+    curl -i -X POST -H "Content-Type: application/xml" -T foo.xml http://localhost:7100?xslt=file:///home/user/events-vt.xsl
 
 The xslt transformation is assumed to be synchronous by default and the result is sent to the client as soon as the transformation is done.
 
