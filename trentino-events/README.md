@@ -7,11 +7,11 @@ The XSLT transformer takes as input xml data and the url of a xslt template and 
 
 The data are about the events in the Province of Trento. The vocabulary used in the mapping are  
 
-rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-rdfs <http://www.w3.org/2000/01/rdf-schema#>  
-geo <http://www.w3.org/2003/01/geo/wgs84_pos#>
-xsd <http://www.w3.org/2001/XMLSchema#>  
-schema <http://schema.org/>
+    rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    rdfs <http://www.w3.org/2000/01/rdf-schema#>  
+    geo <http://www.w3.org/2003/01/geo/wgs84_pos#>
+    xsd <http://www.w3.org/2001/XMLSchema#>  
+    schema <http://schema.org/>
 
 For each event the following information are extracted and mapped to RDF  
 - Title of the events (English and Italian)  
