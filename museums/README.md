@@ -34,7 +34,7 @@ For each of the Historic sights we extract and map to RDF the following informat
 
 The vocabularies used in the mapping are:
 
-```
+```turtle
  rdf     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   
  rdfs	 <http://www.w3.org/2000/01/rdf-schema#>   
  geo	 <http://www.w3.org/2003/01/geo/wgs84_pos#>   
@@ -44,7 +44,7 @@ The vocabularies used in the mapping are:
 As base URI we use ``` http://fusepool.eu/museum/ ```
 A snippet of the resulting transformation:
 
-```
+```turtle
 @prefix schema: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -83,8 +83,9 @@ Transformation rules get extracted from OpenRefine and saved in a JSON file, whi
 
 Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data:
 
+```bash
 	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/andreybratus/p3-transformer-configs/master/museums/museums_transform.json"
-
+```
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous transformer, which would return similar response:
 
 ```
@@ -96,12 +97,16 @@ Location: /job/b75afaef-9a26-4cf6-b8f1-78a272b9ff66
 Transfer-Encoding: chunked
 Server: Jetty(9.2.z-SNAPSHOT)
 ```
-to retrieve data from it construct the following request using the job id from Location header: **REMEMBER to use your job id**
+to retrieve data, construct the following request using the job id from Location header: **REMEMBER to use your job id**
 
+```bash
 	curl -XGET "http://hetzy1.spaziodati.eu:7100/job/b75afaef-9a26-4cf6-b8f1-78a272b9ff66"
-
+```
 
 	
 ## Example Usages of the Data
+
+This dataset can be used to find historical sights situated around (nearby) with respect to a given location.
+Moreover it can be combined with datasets containing other points of interst in the same region which are also represented by geographical coordinates (accomodations, restaurants).
 
 *TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
