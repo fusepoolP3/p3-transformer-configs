@@ -5,7 +5,7 @@ The p3-batchrefine transformer takes a CSV file as input data and a JSON file as
 
     http://dati.trentino.it/dataset/farmacie-pat
 
-The data are about the events in the Province of Trento. The vocabularies used in the mapping are  
+The data is about the pharmacies located within the Province of Trento. The vocabularies used in the mapping are  
 
     rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     rdfs <http://www.w3.org/2000/01/rdf-schema#>  
@@ -14,7 +14,7 @@ The data are about the events in the Province of Trento. The vocabularies used i
     schema <http://schema.org/>
 
 For each pharmacy the following information are extracted and mapped to RDF  
-- Name of the pharmacy     
+- Name of the pharmacy
 - Address with postal code
 - Geographic coordinates (lat, long)  
 
