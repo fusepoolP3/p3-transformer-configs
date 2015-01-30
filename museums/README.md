@@ -16,32 +16,27 @@ This dataset aims at uncovering cultural locations in the region, mainly museums
  > | 5001 | 1612472 | 4842033 | 43.722648 | 10.396000 | 3 | Monumento o complesso monumentale | 1 | Arte | BATTISTERO DI PISA | Piazza del Duomo |  | Pisa | PI | 1 |
  >
 
-Each line represents information about the historical/cultural sight: name, type (museum/monument), address (city, street) and GPS cordinates.
+Each line contains information about a historical/cultural sight: name, type (museum/monument), address (city, street) and GPS cordinates.
 
-We use Batchrefine transformer to clean the dataset and to transform it into RDF:
-* change entries in "denominazione" column to CamelCase: **_BATTISTERO DI PISA -> Battistero Di Pisa_**
+We use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) to clean the dataset and to transform it into RDF.
 
-* apply rounding to "lat/lon" columns to 3 digits after decimal point: **_10.396000 -> 10.396_**
+#### Cleaning 
+* change entries in "denominazione" column from uppercase to CamelCase: **_BATTISTERO DI PISA -> Battistero Di Pisa_**
 
-For each of the Historic sights we extract and map to RDF the following information:
+* apply rounding operation to "lat/lon" columns in order to have 3 digits after decimal point: **_10.396000 -> 10.396_**
+
+#### RDF mapping
+For each of the historic sights we extract and map to RDF the following information:
 
 * Name of the location
-* Address
 * Category
+* Address
 * Geographic coordinates (lat, long)
 
 ## Transformed Data
 
-The vocabularies used in the mapping are:
-
-```turtle
- rdf     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   
- rdfs	 <http://www.w3.org/2000/01/rdf-schema#>   
- geo	 <http://www.w3.org/2003/01/geo/wgs84_pos#>   
- schema  <http://schema.org/>
-```
-
 As base URI we use ``` http://fusepool.eu/museum/ ```
+
 A snippet of the resulting transformation:
 
 ```turtle
@@ -77,16 +72,19 @@ A snippet of the resulting transformation:
 
 ## Transformation Configuration
 
-To use Batchrefine transformer a transform configuration is rquired. We use GUI of OpenRefine to design transformation rules that will be further passed to batchrefine transformer in a query parameter. A brief tutorial how we can do that can be found [here](https://github.com/andreybratus/tutorial).
+To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of OpenRefine to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
 
-Transformation rules get extracted from OpenRefine and saved in a JSON file, which we also provide: [museums_transform.json](https://raw.githubusercontent.com/andreybratus/p3-transformer-configs/master/museums/museums_transform.json).
+Transformation rules are in the form of a JSON array and are saved in a file: [museums_transform.json](https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/museums/museums_transform.json).
 
-Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data:
+
+#### Use of Batchrefine transformer
+
+Transformation rules are passed as a 'refinejson' query parameter to the transformer together with input data:
 
 ```bash
-	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/andreybratus/p3-transformer-configs/master/museums/museums_transform.json"
+	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/museums/museums_transform.json"
 ```
-http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous transformer, which would return similar response:
+http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
 
 ```
 HTTP/1.1 100 Continue
@@ -97,16 +95,16 @@ Location: /job/b75afaef-9a26-4cf6-b8f1-78a272b9ff66
 Transfer-Encoding: chunked
 Server: Jetty(9.2.z-SNAPSHOT)
 ```
+
 to retrieve data, construct the following request using the job id from Location header: **REMEMBER to use your job id**
 
 ```bash
 	curl -XGET "http://hetzy1.spaziodati.eu:7100/job/b75afaef-9a26-4cf6-b8f1-78a272b9ff66"
 ```
 
-	
 ## Example Usages of the Data
 
-This dataset can be used to find historical sights situated around (nearby) with respect to a given location.
+This dataset can be used to find historical sights situated around (nearby) a given location.
 Moreover it can be combined with datasets containing other points of interst in the same region which are also represented by geographical coordinates (accomodations, restaurants).
 
 *TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
