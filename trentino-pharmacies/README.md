@@ -14,12 +14,10 @@ The data are about the events in the Province of Trento. The vocabularies used i
     schema <http://schema.org/>
 
 For each pharmacy the following information are extracted and mapped to RDF  
-- Title of the events (English and Italian)  
-- Description of the event (English and Italian)  
-- Address  
+- Name of the pharmacy     
+- Address with postal code
 - Geographic coordinates (lat, long)  
-- Start and end dates  
-- Organizer
+
 
 The transformer to use with the data set and its configuration file are show in the table
 
