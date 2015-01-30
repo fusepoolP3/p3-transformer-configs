@@ -94,7 +94,7 @@ Transformation rules are extracted from OpenRefine and saved in a JSON file, whi
 Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data:
 
 ```bash
-curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100?refinejson=FIXME"
+curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/hotels/strutture-transform.json"
 ```
 
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
@@ -163,4 +163,4 @@ The Virtuoso CSV transformer requires no end-user configuration, insofar as the 
 
 The "Tuscany Region - Accommodations" dataset archive could provide the basis for online services supporting the searching and booking of tourist accommodation. The geo-referenced establishments could also be represented on a map.
 
-*TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
+**TODO** Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
