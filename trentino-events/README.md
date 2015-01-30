@@ -21,7 +21,7 @@ For each event the following information are extracted and mapped to RDF
 - Start and end dates  
 - Organizer
 
-The xml data must be sent to the transformer via HTTP POST with the url of the XSLT file as parameter. If the xslt file is in a local folder (e.g. /home/user/ ) run the command  
+The transformer that can be used to transform the XML data into RDF is the [p3-xslt-transformer](https://github.com/fusepoolP3/p3-xslt-transformer) and must use the XSLT file events-vt.xsl as its configuration file. The xml data must be sent to the transformer via HTTP POST with the url of the XSLT file as parameter. If the xslt file is in a local folder (e.g. /home/user/ ) run the command  
 
     curl -i -X POST -H "Content-Type: application/xml" -T foo.xml http://localhost:7100?xslt=file:///home/user/events-vt.xsl
 
