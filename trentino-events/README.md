@@ -22,9 +22,11 @@ For each event the following information are extracted and mapped to RDF
 - Organizer
 
 The transformer that can be used to transform the XML data into RDF is the [p3-xslt-transformer](https://github.com/fusepoolP3/p3-xslt-transformer) and must use the XSLT file events-vt.xsl as its configuration file.
-| Data set URL                                       | Transformer       | Config file     |
-|----------------------------------------------------|-------------------|-----------------|
-| [visittrentino](http://www.visittrentino.it/media/eventi/eventi.xml) |[p3-xslt-transformer](https://github.com/fusepoolP3/p3-xslt-transformer)|events-vt.xsl|
+
+| Data set URL                                       | Transformer       | Config file     |  
+|----------------------------------------------------|-------------------|-----------------|  
+| [visittrentino](http://www.visittrentino.it/media/eventi/eventi.xml) |[p3-xslt-transformer](https://github.com/fusepoolP3/p3-xslt-transformer)|events-vt.xsl|  
+
 
 The xml data must be sent to the transformer via HTTP POST with the url of the XSLT file as parameter. If the xslt file is in a local folder (e.g. /home/user/ ) run the command  
 
