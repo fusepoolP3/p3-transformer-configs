@@ -65,3 +65,23 @@ An example of the transformation result is given below
                  schema:name "Federazione Arrampicata Sportiva Italiana" ;
                  schema:telephone "+39 0544 502661" ;
                  schema:email "segreteria@federclimb.it" .
+
+An example SPARQL query to retrieve events between a start date and an end date with name, location and geographic coordinates is given below
+
+    PREFIX spatial: <http://jena.apache.org/spatial#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX schema: <http://schema.org/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+    SELECT ?ev_label ?loc_label ?start ?end ?lat ?long
+    {
+      ?event schema:location ?location ;
+             rdfs:label ?ev_label ;
+             schema:startDate ?start ;
+             schema:endDate ?end .
+      ?location rdfs:label ?loc_label ;
+                geo:lat ?lat ;
+                geo:long ?long .
+      FILTER( ?start >= "2014-10-01"^^xsd:date && ?start <= "2014-11-01"^^xsd:date && lang(?ev_label)='it' )
+    }
