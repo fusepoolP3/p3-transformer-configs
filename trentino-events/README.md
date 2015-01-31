@@ -66,7 +66,7 @@ An example of the transformation result is given below
                  schema:telephone "+39 0544 502661" ;
                  schema:email "segreteria@federclimb.it" .
 
-An example SPARQL query to retrieve events between a start date and an end date with name, location and geographic coordinates is given below
+An example SPARQL query to retrieve events that start between two dates with name, location and geographic coordinates is given below
 
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX schema: <http://schema.org/>
