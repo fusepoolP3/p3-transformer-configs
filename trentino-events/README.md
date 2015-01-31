@@ -68,7 +68,6 @@ An example of the transformation result is given below
 
 An example SPARQL query to retrieve events between a start date and an end date with name, location and geographic coordinates is given below
 
-    PREFIX spatial: <http://jena.apache.org/spatial#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX schema: <http://schema.org/>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
