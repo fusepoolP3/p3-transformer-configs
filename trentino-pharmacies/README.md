@@ -45,7 +45,7 @@ A README file with instructions on how to use the transformer is available at th
          schema:addressRegion "PROV. AUTON. TRENTO" ;  
          schema:postalCode "38028" .  
 
-    <urn:uuid:fusepoolp3:pharmacy:4054> schema:streetAddress <urn:uuid:fusepoolp3:pharmacy:address:0> ;  
+    <urn:uuid:fusepoolp3:pharmacy:4054> schema:address <urn:uuid:fusepoolp3:pharmacy:address:0> ;  
          rdfs:label "Farmacia SILVESTRI LUCIANA" .  
 
 An example SPARQL query is given below
