@@ -47,3 +47,25 @@ A README file with instructions on how to use the transformer is available at th
 
     <urn:uuid:fusepoolp3:pharmacy:4054> schema:streetAddress <urn:uuid:fusepoolp3:pharmacy:address:0> ;  
          rdfs:label "Farmacia SILVESTRI LUCIANA" .  
+
+An example SPARQL query is given below
+
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+    PREFIX schema: <http://schema.org/>
+    SELECT *
+    {
+       ?pharm rdf:type schema:Pharmacy ;
+              rdfs:label ?label ;
+              geo:lat ?lat ;
+              geo:long ?long ;
+              schema:address ?address .
+       ?address rdf:type schema:PostalAddress ;
+                schema:streetAddress ?street ;
+                schema:addressLocality ?location ;
+                schema:addressRegion ?region ;
+                schema:postalCode ?postecode .
+    }
