@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:sioc="http://rdfs.org/sioc/ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:opl="http://www.openlinksw.com/schema/attribution#"
+	xmlns:schema="http://schema.org/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:oplbase="http://www.openlinksw.com/schemas/oplbase#" >
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>owl</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>dc</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>dcterms</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>rdf</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>rdfs</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.org/sioc/ns#">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>sioc</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>schemaOrg</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/oplbase#">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schema/attribution#DataSource" />
+    <opl:hasNamespacePrefix>oplbase</opl:hasNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_6">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Hosteria Toblisellipoint</rdfs:label>
+    <schema:name>Hosteria Toblisellipoint</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>6</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_6_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_7">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>La Stalla Del Non</rdfs:label>
+    <schema:name>La Stalla Del Non</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>7</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_7_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_16">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Ostaria Del Carador </rdfs:label>
+    <schema:name>Ostaria Del Carador </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>16</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_16_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_6_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Garda, 3; Calavino</rdfs:label>
+    <schema:streetAddress>Via Garda, 3</schema:streetAddress>
+    <schema:addressLocality>Calavino</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_7_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piaz Veie, 28; Campitello Di Fassa-ciampedel</rdfs:label>
+    <schema:streetAddress>Piaz Veie, 28</schema:streetAddress>
+    <schema:addressLocality>Campitello Di Fassa-ciampedel</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_16_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Negheli, 58; Folgaria</rdfs:label>
+    <schema:streetAddress>Via Negheli, 58</schema:streetAddress>
+    <schema:addressLocality>Folgaria</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_23">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Malga Pan</rdfs:label>
+    <schema:name>Malga Pan</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>23</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_23_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_24">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Post Hotel Restauratyrol</rdfs:label>
+    <schema:name>Post Hotel Restauratyrol</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>24</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_24_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_26">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Ristorante An</rdfs:label>
+    <schema:name>Ristorante An</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>26</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_26_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_29">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Ristorante Rododendro</rdfs:label>
+    <schema:name>Ristorante Rododendro</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>29</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_29_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_33">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Ristorante Antica Gardumo </rdfs:label>
+    <schema:name>Ristorante Antica Gardumo </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>33</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_33_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_36">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Ostaria Del Filo&#39; </rdfs:label>
+    <schema:name>Ostaria Del Filo&#39; </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>36</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_36_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_38">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Alla Corte Dei Toldi</rdfs:label>
+    <schema:name>Alla Corte Dei Toldi</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>38</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_38_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_40">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Antica Trattoria Al Volt</rdfs:label>
+    <schema:name>Antica Trattoria Al Volt</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>40</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_40_Addr" />
+    <schema:description>Trattoria-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_41">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Antica Trattoria Due Mori </rdfs:label>
+    <schema:name>Antica Trattoria Due Mori </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>41</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_41_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_23_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Costalunga, 56; Moena</rdfs:label>
+    <schema:streetAddress>Via Costalunga, 56</schema:streetAddress>
+    <schema:addressLocality>Moena</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_24_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piazza Italia, 10; Moena</rdfs:label>
+    <schema:streetAddress>Piazza Italia, 10</schema:streetAddress>
+    <schema:addressLocality>Moena</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_26_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Nazionale, 20; Monclassico</rdfs:label>
+    <schema:streetAddress>Via Nazionale, 20</schema:streetAddress>
+    <schema:addressLocality>Monclassico</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_29_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Strada Per Pontesana, 5; Pellizzano</rdfs:label>
+    <schema:streetAddress>Strada Per Pontesana, 5</schema:streetAddress>
+    <schema:addressLocality>Pellizzano</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_33_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Ai Piani, 1; Ronzo-chienis</rdfs:label>
+    <schema:streetAddress>Via Ai Piani, 1</schema:streetAddress>
+    <schema:addressLocality>Ronzo-chienis</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_36_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Viale Merlonga, 48/A; Smarano</rdfs:label>
+    <schema:streetAddress>Viale Merlonga, 48/A</schema:streetAddress>
+    <schema:addressLocality>Smarano</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_38_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Dei Falidoni, 32; Terzolas</rdfs:label>
+    <schema:streetAddress>Via Dei Falidoni, 32</schema:streetAddress>
+    <schema:addressLocality>Terzolas</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_40_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via S. Croce, 16; Trento</rdfs:label>
+    <schema:streetAddress>Via S. Croce, 16</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_41_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via S. Marco, 11; Trento</rdfs:label>
+    <schema:streetAddress>Via S. Marco, 11</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_42">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Hotel Villa Madruzzo </rdfs:label>
+    <schema:name>Hotel Villa Madruzzo </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>42</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_42_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_43">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>La Cantinota  </rdfs:label>
+    <schema:name>La Cantinota  </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>43</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_43_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_42_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Ponte Alto, 26; Trento</rdfs:label>
+    <schema:streetAddress>Via Ponte Alto, 26</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_43_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via S. Marco, 22-24; Trento</rdfs:label>
+    <schema:streetAddress>Via S. Marco, 22-24</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub">
+    <rdf:type rdf:resource="http://rdfs.org/sioc/ns#Container" />
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/opltable#Table" />
+    <owl:sameAs rdf:resource="http://fusepool.openlinksw.com/trento/pub#this" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_36" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_38" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_40" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_41" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_24" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_26" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_29" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_33" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_28" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_23" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_6" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_7" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_16" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_42" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_43" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_45" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_46" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_47" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_48" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_35" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_37" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_39" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_44" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_30" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_31" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_32" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_34" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_10" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_11" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_12" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_13" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_4" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_5" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_8" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_9" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_1" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_2" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_3" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_25" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_27" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_19" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_20" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_21" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_22" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_14" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_15" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_17" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_18" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/about/id/http/fusepool.openlinksw.com/trento/pub">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Document" />
+    <sioc:container_of rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <dc:title>http://fusepool.openlinksw.com/trento/pub</dc:title>
+    <opl:isDescribedUsing rdf:resource="http://www.openlinksw.com/schemas/oplbase#" />
+    <opl:isDescribedUsing rdf:resource="http://schema.org/" />
+    <opl:isDescribedUsing rdf:resource="http://purl.org/dc/terms/" />
+    <opl:isDescribedUsing rdf:resource="http://purl.org/dc/elements/1.1/" />
+    <opl:isDescribedUsing rdf:resource="http://www.w3.org/2002/07/owl#" />
+    <opl:isDescribedUsing rdf:resource="http://rdfs.org/sioc/ns#" />
+    <opl:isDescribedUsing rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <opl:isDescribedUsing rdf:resource="http://www.w3.org/2000/01/rdf-schema#" />
+    <dcterms:subject rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_1">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Al Faggio </rdfs:label>
+    <schema:name>Al Faggio </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>1</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_1_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_2">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Osteria Il Ritratto</rdfs:label>
+    <schema:name>Osteria Il Ritratto</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>2</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_2_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_3">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Ai Due Cami</rdfs:label>
+    <schema:name>Ai Due Cami</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>3</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_3_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_4">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Al Posta Hotel - Ristorante Ca&#39; Dei Boci </rdfs:label>
+    <schema:name>Al Posta Hotel - Ristorante Ca&#39; Dei Boci </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>4</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_4_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_5">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>La Rupe Di Bese</rdfs:label>
+    <schema:name>La Rupe Di Bese</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>5</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_5_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_8">
+    <rdf:type rdf:resource="http://schema.org/FastFoodRestaurant" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>El Pael </rdfs:label>
+    <schema:name>El Pael </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>8</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_8_Addr" />
+    <schema:description>Ristorante-Pizzeria</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_9">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Costa Salici </rdfs:label>
+    <schema:name>Costa Salici </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>9</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_9_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_10">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Ristorante Al Convento</rdfs:label>
+    <schema:name>Ristorante Al Convento</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>10</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_10_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_11">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Aurora</rdfs:label>
+    <schema:name>Aurora</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>11</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_11_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_12">
+    <rdf:type rdf:resource="http://schema.org/FastFoodRestaurant" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Giardino</rdfs:label>
+    <schema:name>Giardino</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>12</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_12_Addr" />
+    <schema:description>Ristorante-Pizzeria-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_13">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Burba </rdfs:label>
+    <schema:name>Burba </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>13</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_13_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_14">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Hotel Pineta</rdfs:label>
+    <schema:name>Hotel Pineta</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>14</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_14_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_15">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Alp &amp; Wellness Sport Hotel Panorama</rdfs:label>
+    <schema:name>Alp &amp; Wellness Sport Hotel Panorama</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>15</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_15_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_17">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdfs:label>Albergo Ristorante Bar Al Sole</rdfs:label>
+    <schema:name>Albergo Ristorante Bar Al Sole</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>17</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_17_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_18">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Locanda Delle Tre Chiavi  -</rdfs:label>
+    <schema:name>Locanda Delle Tre Chiavi  -</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>18</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_18_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_19">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/FastFoodRestaurant" />
+    <rdfs:label>Albergo Cervo Ristorante Stube Del Cervo</rdfs:label>
+    <schema:name>Albergo Cervo Ristorante Stube Del Cervo</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>19</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_19_Addr" />
+    <schema:description>Albergo-Ristorante-Pizzeria-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_20">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/FastFoodRestaurant" />
+    <rdfs:label>Cantinota</rdfs:label>
+    <schema:name>Cantinota</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>20</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_20_Addr" />
+    <schema:description>Ristorante-Pizzeria</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_21">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Albergo Lusernarhof Bar Ristorante</rdfs:label>
+    <schema:name>Albergo Lusernarhof Bar Ristorante</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>21</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_21_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_22">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Per Bacco </rdfs:label>
+    <schema:name>Per Bacco </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>22</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_22_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_25">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Alexander Hotel</rdfs:label>
+    <schema:name>Alexander Hotel</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>25</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_25_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_27">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Al Forte Alto </rdfs:label>
+    <schema:name>Al Forte Alto </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>27</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_27_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_1_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Fovo, 11; Andalo</rdfs:label>
+    <schema:streetAddress>Via Fovo, 11</schema:streetAddress>
+    <schema:addressLocality>Andalo</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_2_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Ferrera, 30; Arco</rdfs:label>
+    <schema:streetAddress>Via Ferrera, 30</schema:streetAddress>
+    <schema:addressLocality>Arco</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_3_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Pontara, 352; Baselga Di Pine&#39;</rdfs:label>
+    <schema:streetAddress>Via Pontara, 352</schema:streetAddress>
+    <schema:addressLocality>Baselga Di Pine&#39;</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_4_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Targa, 1; Baselga Di Pine&#39;</rdfs:label>
+    <schema:streetAddress>Via Targa, 1</schema:streetAddress>
+    <schema:addressLocality>Baselga Di Pine&#39;</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_5_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Castel Beseno, 6; Besenello</rdfs:label>
+    <schema:streetAddress>Via Castel Beseno, 6</schema:streetAddress>
+    <schema:addressLocality>Besenello</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_8_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Roma, 54; Canazei-cianacei</rdfs:label>
+    <schema:streetAddress>Via Roma, 54</schema:streetAddress>
+    <schema:addressLocality>Canazei-cianacei</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_9_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Costa Salici, 10; Cavalese</rdfs:label>
+    <schema:streetAddress>Via Costa Salici, 10</schema:streetAddress>
+    <schema:addressLocality>Cavalese</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_10_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piazzetta Rizzoli, 4; Cavalese</rdfs:label>
+    <schema:streetAddress>Piazzetta Rizzoli, 4</schema:streetAddress>
+    <schema:addressLocality>Cavalese</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_11_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Loc. Cascidei Pomi, 139; Cimego</rdfs:label>
+    <schema:streetAddress>Loc. Cascidei Pomi, 139</schema:streetAddress>
+    <schema:addressLocality>Cimego</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_12_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via  Pilati, 16; Cles</rdfs:label>
+    <schema:streetAddress>Via  Pilati, 16</schema:streetAddress>
+    <schema:addressLocality>Cles</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_13_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Pietro Bernardelli, 32; Commezzadura</rdfs:label>
+    <schema:streetAddress>Via Pietro Bernardelli, 32</schema:streetAddress>
+    <schema:addressLocality>Commezzadura</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_14_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Al Santuario, 17; Coredo</rdfs:label>
+    <schema:streetAddress>Via Al Santuario, 17</schema:streetAddress>
+    <schema:addressLocality>Coredo</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_15_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Carletti, 6; Fai Della Paganella</rdfs:label>
+    <schema:streetAddress>Via Carletti, 6</schema:streetAddress>
+    <schema:addressLocality>Fai Della Paganella</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_17_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via 3 Novembre, 12; Fiave&#39;</rdfs:label>
+    <schema:streetAddress>Via 3 Novembre, 12</schema:streetAddress>
+    <schema:addressLocality>Fiave&#39;</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_18_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via C. Vannetti, 2; Isera</rdfs:label>
+    <schema:streetAddress>Via C. Vannetti, 2</schema:streetAddress>
+    <schema:addressLocality>Isera</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_19_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piazza Milano, 2; Lavarone</rdfs:label>
+    <schema:streetAddress>Piazza Milano, 2</schema:streetAddress>
+    <schema:addressLocality>Lavarone</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_20_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Trieste, 1; Levico Terme</rdfs:label>
+    <schema:streetAddress>Via Trieste, 1</schema:streetAddress>
+    <schema:addressLocality>Levico Terme</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_21_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Tezze, 43; Luserna-lusern</rdfs:label>
+    <schema:streetAddress>Via Tezze, 43</schema:streetAddress>
+    <schema:addressLocality>Luserna-lusern</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_22_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via E. Devarda, 28; Mezzolombardo</rdfs:label>
+    <schema:streetAddress>Via E. Devarda, 28</schema:streetAddress>
+    <schema:addressLocality>Mezzolombardo</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_25_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piazza Scuole, 7; Molveno</rdfs:label>
+    <schema:streetAddress>Piazza Scuole, 7</schema:streetAddress>
+    <schema:addressLocality>Molveno</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_27_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Castel Penede, 16; Nago-torbole</rdfs:label>
+    <schema:streetAddress>Via Castel Penede, 16</schema:streetAddress>
+    <schema:addressLocality>Nago-torbole</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_28">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Cevedale Liviromance Hotel </rdfs:label>
+    <schema:name>Cevedale Liviromance Hotel </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>28</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_28_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_30">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>El Filo&#39;</rdfs:label>
+    <schema:name>El Filo&#39;</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>30</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_30_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_31">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/FastFoodRestaurant" />
+    <rdfs:label>Le Giare </rdfs:label>
+    <schema:name>Le Giare </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>31</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_31_Addr" />
+    <schema:description>Ristorante-Pizzeria-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_32">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Albergo Martinelli </rdfs:label>
+    <schema:name>Albergo Martinelli </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>32</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_32_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_34">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>San Colombano</rdfs:label>
+    <schema:name>San Colombano</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>34</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_34_Addr" />
+    <schema:description>Ristorante</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_35">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Ristorante Da Pino</rdfs:label>
+    <schema:name>Ristorante Da Pino</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>35</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_35_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_37">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Osteria Ca&#39; Dei Giosi </rdfs:label>
+    <schema:name>Osteria Ca&#39; Dei Giosi </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>37</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_37_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_39">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Al Vo&#39;</rdfs:label>
+    <schema:name>Al Vo&#39;</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>39</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_39_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_44">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Old Bar &amp; Food </rdfs:label>
+    <schema:name>Old Bar &amp; Food </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>44</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_44_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_45">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Osteria A Le Due Spade</rdfs:label>
+    <schema:name>Osteria A Le Due Spade</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>45</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_45_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_46">
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Scrigdel Duomo </rdfs:label>
+    <schema:name>Scrigdel Duomo </schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>46</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_46_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_47">
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdfs:label>Trattoria Al Tino</rdfs:label>
+    <schema:name>Trattoria Al Tino</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>47</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_47_Addr" />
+    <schema:description>Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_48">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/BarOrPub" />
+    <rdf:type rdf:resource="http://schema.org/Restaurant" />
+    <rdfs:label>Alpino</rdfs:label>
+    <schema:name>Alpino</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/pub" />
+    <oplbase:id>48</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/trento/pub#Organization_48_Addr" />
+    <schema:description>Albergo-Ristorante-Bar</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_28_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Roma, 33; Peio</rdfs:label>
+    <schema:streetAddress>Via Roma, 33</schema:streetAddress>
+    <schema:addressLocality>Peio</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_30_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Roma, 42; Pozza Di Fassa-poza</rdfs:label>
+    <schema:streetAddress>Via Roma, 42</schema:streetAddress>
+    <schema:addressLocality>Pozza Di Fassa-poza</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_31_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Parco, 7; Pozza Di Fassa-poza</rdfs:label>
+    <schema:streetAddress>Via Parco, 7</schema:streetAddress>
+    <schema:addressLocality>Pozza Di Fassa-poza</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_32_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Del Car, 4; Ronzo-chienis</rdfs:label>
+    <schema:streetAddress>Via Del Car, 4</schema:streetAddress>
+    <schema:addressLocality>Ronzo-chienis</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_34_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Vicenza, 28; Rovereto</rdfs:label>
+    <schema:streetAddress>Via Vicenza, 28</schema:streetAddress>
+    <schema:addressLocality>Rovereto</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_35_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Postal, 39; San Michele All&#39;adige</rdfs:label>
+    <schema:streetAddress>Via Postal, 39</schema:streetAddress>
+    <schema:addressLocality>San Michele All&#39;adige</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_37_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Villa Alta, 9/A; Terlago</rdfs:label>
+    <schema:streetAddress>Via Villa Alta, 9/A</schema:streetAddress>
+    <schema:addressLocality>Terlago</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_39_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Vicolo Del Vo&#39;, 11; Trento</rdfs:label>
+    <schema:streetAddress>Vicolo Del Vo&#39;, 11</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_44_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Della Roggia Grande, 8; Trento</rdfs:label>
+    <schema:streetAddress>Via Della Roggia Grande, 8</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_45_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Don Rizzi, 11; Trento</rdfs:label>
+    <schema:streetAddress>Via Don Rizzi, 11</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_46_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Piazza Del Duomo, 29; Trento</rdfs:label>
+    <schema:streetAddress>Piazza Del Duomo, 29</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_47_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via SS. Trinita&#39;, 10; Trento</rdfs:label>
+    <schema:streetAddress>Via SS. Trinita&#39;, 10</schema:streetAddress>
+    <schema:addressLocality>Trento</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/trento/pub#Organization_48_Addr">
+    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
+    <rdfs:label>Via Di Pizzano, 32; Vermiglio</rdfs:label>
+    <schema:streetAddress>Via Di Pizzano, 32</schema:streetAddress>
+    <schema:addressLocality>Vermiglio</schema:addressLocality>
+    <schema:Country>IT</schema:Country>
+  </rdf:Description>
+</rdf:RDF>

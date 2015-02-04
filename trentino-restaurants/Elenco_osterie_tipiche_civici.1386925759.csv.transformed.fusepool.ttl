@@ -1,0 +1,721 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix opl:	<http://www.openlinksw.com/schema/attribution#> .
+@prefix ns2:	<http://fusepool.openlinksw.com/trento/pub#> .
+@prefix schema:	<http://schema.org/> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc:	<http://rdfs.org/sioc/ns#> .
+@prefix ns6:	<http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/trento/> .
+@prefix oplbase:	<http://www.openlinksw.com/schemas/oplbase#> .
+@prefix opltable:	<http://www.openlinksw.com/schemas/opltable#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix ns10:	<http://fusepool.openlinksw.com/about/id/http/fusepool.openlinksw.com/trento/> .
+@prefix bibo:	<http://purl.org/ontology/bibo/> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+
+owl:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"owl" .
+dc:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"dc" .
+dcterms:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"dcterms" .
+rdf:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"rdf" .
+rdfs:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"rdfs" .
+sioc:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"sioc" .
+schema:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"schemaOrg" .
+oplbase:
+	rdf:type	opl:DataSource ;
+	opl:hasNamespacePrefix	"oplbase" .
+ns2:Organization_6
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Hosteria Toblisellipoint" ;
+	schema:name	"Hosteria Toblisellipoint" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"6" ;
+	schema:address	ns2:Organization_6_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_7
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"La Stalla Del Non" ;
+	schema:name	"La Stalla Del Non" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"7" ;
+	schema:address	ns2:Organization_7_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_16
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Ostaria Del Carador " ;
+	schema:name	"Ostaria Del Carador " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"16" ;
+	schema:address	ns2:Organization_16_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_6_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Garda, 3; Calavino" ;
+	schema:streetAddress	"Via Garda, 3" ;
+	schema:addressLocality	"Calavino" ;
+	schema:Country	"IT" .
+ns2:Organization_7_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piaz Veie, 28; Campitello Di Fassa-ciampedel" ;
+	schema:streetAddress	"Piaz Veie, 28" ;
+	schema:addressLocality	"Campitello Di Fassa-ciampedel" ;
+	schema:Country	"IT" .
+ns2:Organization_16_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Negheli, 58; Folgaria" ;
+	schema:streetAddress	"Via Negheli, 58" ;
+	schema:addressLocality	"Folgaria" ;
+	schema:Country	"IT" .
+ns2:Organization_23
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Malga Pan" ;
+	schema:name	"Malga Pan" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"23" ;
+	schema:address	ns2:Organization_23_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_24
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Post Hotel Restauratyrol" ;
+	schema:name	"Post Hotel Restauratyrol" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"24" ;
+	schema:address	ns2:Organization_24_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_26
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Ristorante An" ;
+	schema:name	"Ristorante An" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"26" ;
+	schema:address	ns2:Organization_26_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_29
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Ristorante Rododendro" ;
+	schema:name	"Ristorante Rododendro" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"29" ;
+	schema:address	ns2:Organization_29_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_33
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Ristorante Antica Gardumo " ;
+	schema:name	"Ristorante Antica Gardumo " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"33" ;
+	schema:address	ns2:Organization_33_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_36
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Ostaria Del Filo' " ;
+	schema:name	"Ostaria Del Filo' " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"36" ;
+	schema:address	ns2:Organization_36_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_38
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Alla Corte Dei Toldi" ;
+	schema:name	"Alla Corte Dei Toldi" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"38" ;
+	schema:address	ns2:Organization_38_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_40
+	rdf:type	schema:BarOrPub ;
+	rdfs:label	"Antica Trattoria Al Volt" ;
+	schema:name	"Antica Trattoria Al Volt" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"40" ;
+	schema:address	ns2:Organization_40_Addr ;
+	schema:description	"Trattoria-Bar" .
+ns2:Organization_41
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Antica Trattoria Due Mori " ;
+	schema:name	"Antica Trattoria Due Mori " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"41" ;
+	schema:address	ns2:Organization_41_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_23_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Costalunga, 56; Moena" ;
+	schema:streetAddress	"Via Costalunga, 56" ;
+	schema:addressLocality	"Moena" ;
+	schema:Country	"IT" .
+ns2:Organization_24_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piazza Italia, 10; Moena" ;
+	schema:streetAddress	"Piazza Italia, 10" ;
+	schema:addressLocality	"Moena" ;
+	schema:Country	"IT" .
+ns2:Organization_26_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Nazionale, 20; Monclassico" ;
+	schema:streetAddress	"Via Nazionale, 20" ;
+	schema:addressLocality	"Monclassico" ;
+	schema:Country	"IT" .
+ns2:Organization_29_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Strada Per Pontesana, 5; Pellizzano" ;
+	schema:streetAddress	"Strada Per Pontesana, 5" ;
+	schema:addressLocality	"Pellizzano" ;
+	schema:Country	"IT" .
+ns2:Organization_33_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Ai Piani, 1; Ronzo-chienis" ;
+	schema:streetAddress	"Via Ai Piani, 1" ;
+	schema:addressLocality	"Ronzo-chienis" ;
+	schema:Country	"IT" .
+ns2:Organization_36_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Viale Merlonga, 48/A; Smarano" ;
+	schema:streetAddress	"Viale Merlonga, 48/A" ;
+	schema:addressLocality	"Smarano" ;
+	schema:Country	"IT" .
+ns2:Organization_38_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Dei Falidoni, 32; Terzolas" ;
+	schema:streetAddress	"Via Dei Falidoni, 32" ;
+	schema:addressLocality	"Terzolas" ;
+	schema:Country	"IT" .
+ns2:Organization_40_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via S. Croce, 16; Trento" ;
+	schema:streetAddress	"Via S. Croce, 16" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_41_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via S. Marco, 11; Trento" ;
+	schema:streetAddress	"Via S. Marco, 11" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_42
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Hotel Villa Madruzzo " ;
+	schema:name	"Hotel Villa Madruzzo " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"42" ;
+	schema:address	ns2:Organization_42_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_43
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"La Cantinota  " ;
+	schema:name	"La Cantinota  " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"43" ;
+	schema:address	ns2:Organization_43_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_42_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Ponte Alto, 26; Trento" ;
+	schema:streetAddress	"Via Ponte Alto, 26" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_43_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via S. Marco, 22-24; Trento" ;
+	schema:streetAddress	"Via S. Marco, 22-24" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns6:pub
+	rdf:type	sioc:Container , opltable:Table ;
+	owl:sameAs	ns2:this ;
+	sioc:container_of	ns2:Organization_6 , ns2:Organization_7 , ns2:Organization_16 , ns2:Organization_23 , ns2:Organization_24 , ns2:Organization_26 , ns2:Organization_29 , ns2:Organization_33 , ns2:Organization_36 , ns2:Organization_38 , ns2:Organization_40 , ns2:Organization_41 , ns2:Organization_42 , ns2:Organization_43 , ns2:Organization_1 , ns2:Organization_2 , ns2:Organization_3 , ns2:Organization_4 , ns2:Organization_5 , ns2:Organization_8 , ns2:Organization_9 , ns2:Organization_10 , ns2:Organization_11 , ns2:Organization_12 , ns2:Organization_13 , ns2:Organization_14 , ns2:Organization_15 , ns2:Organization_17 , ns2:Organization_18 , ns2:Organization_19 , ns2:Organization_20 , ns2:Organization_21 , ns2:Organization_22 , ns2:Organization_25 , ns2:Organization_27 , ns2:Organization_28 , ns2:Organization_30 , ns2:Organization_31 , ns2:Organization_32 , ns2:Organization_34 , ns2:Organization_35 , ns2:Organization_37 , ns2:Organization_39 , ns2:Organization_44 , ns2:Organization_45 , ns2:Organization_46 , ns2:Organization_47 , ns2:Organization_48 .
+ns10:pub
+	rdf:type	bibo:Document ;
+	sioc:container_of	ns6:pub ;
+	dc:title	"http://fusepool.openlinksw.com/trento/pub" ;
+	opl:isDescribedUsing	owl: , dc: , dcterms: , rdf: , rdfs: , sioc: , schema: , oplbase: ;
+	dcterms:subject	ns6:pub .
+ns2:Organization_1
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Al Faggio " ;
+	schema:name	"Al Faggio " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"1" ;
+	schema:address	ns2:Organization_1_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_2
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Osteria Il Ritratto" ;
+	schema:name	"Osteria Il Ritratto" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"2" ;
+	schema:address	ns2:Organization_2_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_3
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Ai Due Cami" ;
+	schema:name	"Ai Due Cami" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"3" ;
+	schema:address	ns2:Organization_3_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_4
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Al Posta Hotel - Ristorante Ca' Dei Boci " ;
+	schema:name	"Al Posta Hotel - Ristorante Ca' Dei Boci " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"4" ;
+	schema:address	ns2:Organization_4_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_5
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"La Rupe Di Bese" ;
+	schema:name	"La Rupe Di Bese" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"5" ;
+	schema:address	ns2:Organization_5_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_8
+	rdf:type	schema:Restaurant , schema:FastFoodRestaurant ;
+	rdfs:label	"El Pael " ;
+	schema:name	"El Pael " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"8" ;
+	schema:address	ns2:Organization_8_Addr ;
+	schema:description	"Ristorante-Pizzeria" .
+ns2:Organization_9
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Costa Salici " ;
+	schema:name	"Costa Salici " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"9" ;
+	schema:address	ns2:Organization_9_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_10
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Ristorante Al Convento" ;
+	schema:name	"Ristorante Al Convento" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"10" ;
+	schema:address	ns2:Organization_10_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_11
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Aurora" ;
+	schema:name	"Aurora" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"11" ;
+	schema:address	ns2:Organization_11_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_12
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:FastFoodRestaurant ;
+	rdfs:label	"Giardino" ;
+	schema:name	"Giardino" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"12" ;
+	schema:address	ns2:Organization_12_Addr ;
+	schema:description	"Ristorante-Pizzeria-Bar" .
+ns2:Organization_13
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Burba " ;
+	schema:name	"Burba " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"13" ;
+	schema:address	ns2:Organization_13_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_14
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Hotel Pineta" ;
+	schema:name	"Hotel Pineta" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"14" ;
+	schema:address	ns2:Organization_14_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_15
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Alp & Wellness Sport Hotel Panorama" ;
+	schema:name	"Alp & Wellness Sport Hotel Panorama" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"15" ;
+	schema:address	ns2:Organization_15_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_17
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Albergo Ristorante Bar Al Sole" ;
+	schema:name	"Albergo Ristorante Bar Al Sole" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"17" ;
+	schema:address	ns2:Organization_17_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_18
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"Locanda Delle Tre Chiavi  -" ;
+	schema:name	"Locanda Delle Tre Chiavi  -" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"18" ;
+	schema:address	ns2:Organization_18_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_19
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel , schema:FastFoodRestaurant ;
+	rdfs:label	"Albergo Cervo Ristorante Stube Del Cervo" ;
+	schema:name	"Albergo Cervo Ristorante Stube Del Cervo" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"19" ;
+	schema:address	ns2:Organization_19_Addr ;
+	schema:description	"Albergo-Ristorante-Pizzeria-Bar" .
+ns2:Organization_20
+	rdf:type	schema:Restaurant , schema:FastFoodRestaurant ;
+	rdfs:label	"Cantinota" ;
+	schema:name	"Cantinota" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"20" ;
+	schema:address	ns2:Organization_20_Addr ;
+	schema:description	"Ristorante-Pizzeria" .
+ns2:Organization_21
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Albergo Lusernarhof Bar Ristorante" ;
+	schema:name	"Albergo Lusernarhof Bar Ristorante" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"21" ;
+	schema:address	ns2:Organization_21_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_22
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Per Bacco " ;
+	schema:name	"Per Bacco " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"22" ;
+	schema:address	ns2:Organization_22_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_25
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Alexander Hotel" ;
+	schema:name	"Alexander Hotel" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"25" ;
+	schema:address	ns2:Organization_25_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_27
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Al Forte Alto " ;
+	schema:name	"Al Forte Alto " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"27" ;
+	schema:address	ns2:Organization_27_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_1_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Fovo, 11; Andalo" ;
+	schema:streetAddress	"Via Fovo, 11" ;
+	schema:addressLocality	"Andalo" ;
+	schema:Country	"IT" .
+ns2:Organization_2_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Ferrera, 30; Arco" ;
+	schema:streetAddress	"Via Ferrera, 30" ;
+	schema:addressLocality	"Arco" ;
+	schema:Country	"IT" .
+ns2:Organization_3_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Pontara, 352; Baselga Di Pine'" ;
+	schema:streetAddress	"Via Pontara, 352" ;
+	schema:addressLocality	"Baselga Di Pine'" ;
+	schema:Country	"IT" .
+ns2:Organization_4_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Targa, 1; Baselga Di Pine'" ;
+	schema:streetAddress	"Via Targa, 1" ;
+	schema:addressLocality	"Baselga Di Pine'" ;
+	schema:Country	"IT" .
+ns2:Organization_5_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Castel Beseno, 6; Besenello" ;
+	schema:streetAddress	"Via Castel Beseno, 6" ;
+	schema:addressLocality	"Besenello" ;
+	schema:Country	"IT" .
+ns2:Organization_8_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Roma, 54; Canazei-cianacei" ;
+	schema:streetAddress	"Via Roma, 54" ;
+	schema:addressLocality	"Canazei-cianacei" ;
+	schema:Country	"IT" .
+ns2:Organization_9_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Costa Salici, 10; Cavalese" ;
+	schema:streetAddress	"Via Costa Salici, 10" ;
+	schema:addressLocality	"Cavalese" ;
+	schema:Country	"IT" .
+ns2:Organization_10_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piazzetta Rizzoli, 4; Cavalese" ;
+	schema:streetAddress	"Piazzetta Rizzoli, 4" ;
+	schema:addressLocality	"Cavalese" ;
+	schema:Country	"IT" .
+ns2:Organization_11_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Loc. Cascidei Pomi, 139; Cimego" ;
+	schema:streetAddress	"Loc. Cascidei Pomi, 139" ;
+	schema:addressLocality	"Cimego" ;
+	schema:Country	"IT" .
+ns2:Organization_12_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via  Pilati, 16; Cles" ;
+	schema:streetAddress	"Via  Pilati, 16" ;
+	schema:addressLocality	"Cles" ;
+	schema:Country	"IT" .
+ns2:Organization_13_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Pietro Bernardelli, 32; Commezzadura" ;
+	schema:streetAddress	"Via Pietro Bernardelli, 32" ;
+	schema:addressLocality	"Commezzadura" ;
+	schema:Country	"IT" .
+ns2:Organization_14_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Al Santuario, 17; Coredo" ;
+	schema:streetAddress	"Via Al Santuario, 17" ;
+	schema:addressLocality	"Coredo" ;
+	schema:Country	"IT" .
+ns2:Organization_15_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Carletti, 6; Fai Della Paganella" ;
+	schema:streetAddress	"Via Carletti, 6" ;
+	schema:addressLocality	"Fai Della Paganella" ;
+	schema:Country	"IT" .
+ns2:Organization_17_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via 3 Novembre, 12; Fiave'" ;
+	schema:streetAddress	"Via 3 Novembre, 12" ;
+	schema:addressLocality	"Fiave'" ;
+	schema:Country	"IT" .
+ns2:Organization_18_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via C. Vannetti, 2; Isera" ;
+	schema:streetAddress	"Via C. Vannetti, 2" ;
+	schema:addressLocality	"Isera" ;
+	schema:Country	"IT" .
+ns2:Organization_19_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piazza Milano, 2; Lavarone" ;
+	schema:streetAddress	"Piazza Milano, 2" ;
+	schema:addressLocality	"Lavarone" ;
+	schema:Country	"IT" .
+ns2:Organization_20_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Trieste, 1; Levico Terme" ;
+	schema:streetAddress	"Via Trieste, 1" ;
+	schema:addressLocality	"Levico Terme" ;
+	schema:Country	"IT" .
+ns2:Organization_21_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Tezze, 43; Luserna-lusern" ;
+	schema:streetAddress	"Via Tezze, 43" ;
+	schema:addressLocality	"Luserna-lusern" ;
+	schema:Country	"IT" .
+ns2:Organization_22_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via E. Devarda, 28; Mezzolombardo" ;
+	schema:streetAddress	"Via E. Devarda, 28" ;
+	schema:addressLocality	"Mezzolombardo" ;
+	schema:Country	"IT" .
+ns2:Organization_25_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piazza Scuole, 7; Molveno" ;
+	schema:streetAddress	"Piazza Scuole, 7" ;
+	schema:addressLocality	"Molveno" ;
+	schema:Country	"IT" .
+ns2:Organization_27_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Castel Penede, 16; Nago-torbole" ;
+	schema:streetAddress	"Via Castel Penede, 16" ;
+	schema:addressLocality	"Nago-torbole" ;
+	schema:Country	"IT" .
+ns2:Organization_28
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Cevedale Liviromance Hotel " ;
+	schema:name	"Cevedale Liviromance Hotel " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"28" ;
+	schema:address	ns2:Organization_28_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_30
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"El Filo'" ;
+	schema:name	"El Filo'" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"30" ;
+	schema:address	ns2:Organization_30_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_31
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:FastFoodRestaurant ;
+	rdfs:label	"Le Giare " ;
+	schema:name	"Le Giare " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"31" ;
+	schema:address	ns2:Organization_31_Addr ;
+	schema:description	"Ristorante-Pizzeria-Bar" .
+ns2:Organization_32
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Albergo Martinelli " ;
+	schema:name	"Albergo Martinelli " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"32" ;
+	schema:address	ns2:Organization_32_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_34
+	rdf:type	schema:Restaurant ;
+	rdfs:label	"San Colombano" ;
+	schema:name	"San Colombano" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"34" ;
+	schema:address	ns2:Organization_34_Addr ;
+	schema:description	"Ristorante" .
+ns2:Organization_35
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Ristorante Da Pino" ;
+	schema:name	"Ristorante Da Pino" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"35" ;
+	schema:address	ns2:Organization_35_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_37
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Osteria Ca' Dei Giosi " ;
+	schema:name	"Osteria Ca' Dei Giosi " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"37" ;
+	schema:address	ns2:Organization_37_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_39
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Al Vo'" ;
+	schema:name	"Al Vo'" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"39" ;
+	schema:address	ns2:Organization_39_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_44
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Old Bar & Food " ;
+	schema:name	"Old Bar & Food " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"44" ;
+	schema:address	ns2:Organization_44_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_45
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Osteria A Le Due Spade" ;
+	schema:name	"Osteria A Le Due Spade" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"45" ;
+	schema:address	ns2:Organization_45_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_46
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Scrigdel Duomo " ;
+	schema:name	"Scrigdel Duomo " ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"46" ;
+	schema:address	ns2:Organization_46_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_47
+	rdf:type	schema:Restaurant , schema:BarOrPub ;
+	rdfs:label	"Trattoria Al Tino" ;
+	schema:name	"Trattoria Al Tino" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"47" ;
+	schema:address	ns2:Organization_47_Addr ;
+	schema:description	"Ristorante-Bar" .
+ns2:Organization_48
+	rdf:type	schema:Restaurant , schema:BarOrPub , schema:Hotel ;
+	rdfs:label	"Alpino" ;
+	schema:name	"Alpino" ;
+	sioc:has_container	ns6:pub ;
+	oplbase:id	"48" ;
+	schema:address	ns2:Organization_48_Addr ;
+	schema:description	"Albergo-Ristorante-Bar" .
+ns2:Organization_28_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Roma, 33; Peio" ;
+	schema:streetAddress	"Via Roma, 33" ;
+	schema:addressLocality	"Peio" ;
+	schema:Country	"IT" .
+ns2:Organization_30_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Roma, 42; Pozza Di Fassa-poza" ;
+	schema:streetAddress	"Via Roma, 42" ;
+	schema:addressLocality	"Pozza Di Fassa-poza" ;
+	schema:Country	"IT" .
+ns2:Organization_31_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Parco, 7; Pozza Di Fassa-poza" ;
+	schema:streetAddress	"Via Parco, 7" ;
+	schema:addressLocality	"Pozza Di Fassa-poza" ;
+	schema:Country	"IT" .
+ns2:Organization_32_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Del Car, 4; Ronzo-chienis" ;
+	schema:streetAddress	"Via Del Car, 4" ;
+	schema:addressLocality	"Ronzo-chienis" ;
+	schema:Country	"IT" .
+ns2:Organization_34_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Vicenza, 28; Rovereto" ;
+	schema:streetAddress	"Via Vicenza, 28" ;
+	schema:addressLocality	"Rovereto" ;
+	schema:Country	"IT" .
+ns2:Organization_35_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Postal, 39; San Michele All'adige" ;
+	schema:streetAddress	"Via Postal, 39" ;
+	schema:addressLocality	"San Michele All'adige" ;
+	schema:Country	"IT" .
+ns2:Organization_37_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Villa Alta, 9/A; Terlago" ;
+	schema:streetAddress	"Via Villa Alta, 9/A" ;
+	schema:addressLocality	"Terlago" ;
+	schema:Country	"IT" .
+ns2:Organization_39_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Vicolo Del Vo', 11; Trento" ;
+	schema:streetAddress	"Vicolo Del Vo', 11" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_44_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Della Roggia Grande, 8; Trento" ;
+	schema:streetAddress	"Via Della Roggia Grande, 8" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_45_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Don Rizzi, 11; Trento" ;
+	schema:streetAddress	"Via Don Rizzi, 11" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_46_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Piazza Del Duomo, 29; Trento" ;
+	schema:streetAddress	"Piazza Del Duomo, 29" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_47_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via SS. Trinita', 10; Trento" ;
+	schema:streetAddress	"Via SS. Trinita', 10" ;
+	schema:addressLocality	"Trento" ;
+	schema:Country	"IT" .
+ns2:Organization_48_Addr
+	rdf:type	schema:PostalAddress ;
+	rdfs:label	"Via Di Pizzano, 32; Vermiglio" ;
+	schema:streetAddress	"Via Di Pizzano, 32" ;
+	schema:addressLocality	"Vermiglio" ;
+	schema:Country	"IT" .
