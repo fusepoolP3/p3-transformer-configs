@@ -49,7 +49,7 @@ An example of the transformation result is given below
                  schema:description "Specialità boulder, difficoltà e velocità"@it ;
                  schema:category "Sport"@it ;
                  schema:description "Boulder, Lead and Speed"@en ;
-                 rdfs:comment "rdfs:comment "PROGRAMMA Venerd&igrave; 6 giugno 2014 &ndash; campionato italiano speed TROFEO                     EVOCLIMB- ore 11.00: apertura iscrizioni e distribuzione pettorali.- ore 15.00: chiusura iscrizioni- ore 15.30: qualifiche Speed U16 M + F15 minuti dopo il termine qualifiche:.."@it ;
+                 rdfs:comment "PROGRAMMA Venerd&igrave; 6 giugno 2014 &ndash; campionato italiano speed TROFEO                     EVOCLIMB- ore 11.00: apertura iscrizioni e distribuzione pettorali.- ore 15.00: chiusura iscrizioni- ore 15.30: qualifiche Speed U16 M + F15 minuti dopo il termine qualifiche:.."@it ;
                  schema:category "Sports"@en ;
                  schema:startDate "2015-06-06"^^xsd:date ;
                  schema:endDate "2015-06-07"^^xsd:date ;
