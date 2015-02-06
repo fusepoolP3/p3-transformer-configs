@@ -73,6 +73,7 @@ An example of the transformation result is given below
                  schema:telephone "+39 0544 502661" ;
                  schema:email "segreteria@federclimb.it" .
 
+The [schema.org](http://schema.org/) ontology is used to describe events, addresses, organizations and locations. The geographic coordinate in WGS84 are described using the [WGS4](http://www.w3.org/2003/01/geo/#vocabulary) ontology. A depiction of the model is given below.  
 ![Trentino Event Model](trentino_event_model.jpg)
 
 An example SPARQL query to retrieve events that start between two dates with name, location and geographic coordinates is given below
