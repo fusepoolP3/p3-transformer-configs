@@ -15,7 +15,8 @@ The data are about the events in the Province of Trento. The vocabularies used i
 
 For each event the following information are extracted and mapped to RDF  
 - Title of the events (English and Italian)  
-- Description of the event (English and Italian)  
+- Description of the event (English and Italian)
+- Shorter description (English and Italian)  
 - Address  
 - Geographic coordinates (lat, long)  
 - Start and end dates  
@@ -48,6 +49,7 @@ An example of the transformation result is given below
                  schema:description "Specialità boulder, difficoltà e velocità"@it ;
                  schema:category "Sport"@it ;
                  schema:description "Boulder, Lead and Speed"@en ;
+                 rdfs:comment "PROGRAMMA Venerd&igrave; 6 giugno 2014 &ndash; campionato italiano speed TROFEO EVOCLIMB- ore 11.00: apertura iscrizioni e distribuzione pettorali.- ore 15.00: chiusura iscrizioni- ore 15.30: qualifiche Speed U16 M + F15 minuti dopo il termine qualifiche:.."@it ;
                  schema:category "Sports"@en ;
                  schema:startDate "2015-06-06"^^xsd:date ;
                  schema:endDate "2015-06-07"^^xsd:date ;

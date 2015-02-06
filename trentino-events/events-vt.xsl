@@ -8,7 +8,7 @@
   <xsl:template match="/">
 # RDF data transformed from the data set available at the url
 # http://www.visittrentino.it/media/eventi/eventi.xml
-# xslt version 1.0.0-20150204_1
+# xslt version 1.0.0-20150204_2
 
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -21,6 +21,7 @@
   <xsl:template match="events">
         <xsl:variable name="apos"><xsl:text>'</xsl:text></xsl:variable>
         <xsl:variable name="double_quote"><xsl:text>"</xsl:text></xsl:variable>
+        <xsl:variable name="stripHTML"><![CDATA[<\s*\w.*?>|<\s*/\s*\w\s*.*?>]]></xsl:variable>
        <xsl:for-each select="event">
 &lt;urn:event:uuid:<xsl:value-of select="alfId"/>&gt; rdf:type schema:Event ;
             <xsl:variable name="quotedlabel" select="name/value[@xml:lang='it']"/>
@@ -30,7 +31,6 @@
             rdfs:label "<xsl:value-of select="translate($quoted_en_label,$double_quote,$apos)"/>"@en ;
             </xsl:if>
             <xsl:variable name="description_it" select="description/value[@xml:lang='it']"/>
-            <xsl:variable name="stripHTML"><![CDATA[<\s*\w.*?>|<\s*/\s*\w\s*.*?>]]></xsl:variable>
             <xsl:if test="$description_it != ''">
               <xsl:variable name="stripped_description_it">
             <xsl:analyze-string select="$description_it" regex="{$stripHTML}">
@@ -41,7 +41,6 @@
           rdfs:comment "<xsl:value-of select="translate($nolinefeed_stripped_description_it,$double_quote,$apos)"/>"@it ;
           </xsl:if>
           <xsl:variable name="description_en" select="description/value[@xml:lang='en']"/>
-          <xsl:variable name="stripHTML"><![CDATA[<\s*\w.*?>|<\s*/\s*\w\s*.*?>]]></xsl:variable>
           <xsl:if test="$description_en != ''">
             <xsl:variable name="stripped_description_en">
               <xsl:analyze-string select="$description_en" regex="{$stripHTML}">
