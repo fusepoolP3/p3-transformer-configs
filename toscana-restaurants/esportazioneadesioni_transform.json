@@ -163,26 +163,26 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column LAT using expression jython:return round(float(value),3)",
+    "description": "Text transform on cells in column LAT using expression jython:return round(float(value),6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "LAT",
-    "expression": "jython:return round(float(value),3)",
+    "expression": "jython:return round(float(value),6)",
     "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column LONG using expression jython:return round(float(value),3)",
+    "description": "Text transform on cells in column LONG using expression jython:return round(float(value),6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "LONG",
-    "expression": "jython:return round(float(value),3)",
+    "expression": "jython:return round(float(value),6)",
     "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10
