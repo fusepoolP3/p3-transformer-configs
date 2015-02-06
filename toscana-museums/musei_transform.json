@@ -27,26 +27,26 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column lat using expression jython:return round(value,3)",
+    "description": "Text transform on cells in column lat using expression jython:return round(value,6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "lat",
-    "expression": "jython:return round(value,3)",
+    "expression": "jython:return round(value,6)",
     "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column lon using expression jython:return round(value,3)",
+    "description": "Text transform on cells in column lon using expression jython:return round(value,6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "lon",
-    "expression": "jython:return round(value,3)",
+    "expression": "jython:return round(value,6)",
     "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10

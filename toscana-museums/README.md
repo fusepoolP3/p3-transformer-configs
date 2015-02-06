@@ -3,7 +3,7 @@ Transformer configuration for Museums dataset
 
 ## Input Data
 
-As input data we use a CSV file provided by the Toscana region, namely [musei.csv](https://raw.githubusercontent.com/andreybratus/p3-transformer-configs/master/museums/musei.csv).
+As input data we use a CSV file provided by the Toscana region, namely [musei.csv](musei.csv).
 > http://mappe.regione.toscana.it/db-webgis/musei/example_postgis.jsp?format=csv
 
 >**An important notice** about this file is that it starts with two blank lines, which makes the file not compliant to CSV format [RFC 4180](https://datatracker.ietf.org/doc/rfc4180/). Currently I assume that we remove them manually, another possible workarounds:
@@ -23,7 +23,7 @@ We use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) t
 #### Cleaning 
 * change entries in "denominazione" column from uppercase to CamelCase: **_BATTISTERO DI PISA -> Battistero Di Pisa_**
 
-* apply rounding operation to "lat/lon" columns in order to have 3 digits after decimal point: **_10.396000 -> 10.396_**
+* apply rounding operation to "lat/lon" columns in order to have 6 digits after decimal point: **_10.39600013248 -> 10.396000_**
 
 #### RDF mapping
 For each of the historic sights we extract and map to RDF the following information:
@@ -74,7 +74,7 @@ A snippet of the resulting transformation:
 
 To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of OpenRefine to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
 
-Transformation rules are in the form of a JSON array and are saved in a file: [museums_transform.json](https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/museums/museums_transform.json).
+Transformation rules are in the form of a JSON array and are saved in a file: [museums_transform.json](https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-museums/musei_transform.json).
 
 
 #### Use of Batchrefine transformer
@@ -82,7 +82,7 @@ Transformation rules are in the form of a JSON array and are saved in a file: [m
 Transformation rules are passed as a 'refinejson' query parameter to the transformer together with input data:
 
 ```bash
-	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/museums/museums_transform.json"
+	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-museums/musei_transform.json"
 ```
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
 
