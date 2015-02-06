@@ -199,5 +199,83 @@
     "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CITTA using expression jython:import re\ng = re.sub(u'Cit\\w+\\ufffd', 'Citta', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CITTA",
+    "expression": "jython:import re\ng = re.sub(u'Cit\\w+\\ufffd', 'Citta', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\ng = re.sub(u'Dellu\\w+\\ufffd', 'Dellunita', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\ng = re.sub(u'Dellu\\w+\\ufffd', 'Dellunita', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Fag\\w+\\ufffd', 'Fagaro', value)\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Fag\\w+\\ufffd', 'Fagaro', value)\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NOME using expression jython:import re\ng = re.sub(u'Zaz\\w+\\ufffd', 'Zazza', value)\ng = re.sub(u'Me\\w+\\ufffd\\w', 'Meles', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOME",
+    "expression": "jython:import re\ng = re.sub(u'Zaz\\w+\\ufffd', 'Zazza', value)\ng = re.sub(u'Me\\w+\\ufffd\\w', 'Meles', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NOME using expression jython:import re\ng = re.sub(u'Bon\\w+\\ufffd', 'Bonta', value)\ng = re.sub(u'Golos\\w+\\ufffd', 'Golosite', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOME",
+    "expression": "jython:import re\ng = re.sub(u'Bon\\w+\\ufffd', 'Bonta', value)\ng = re.sub(u'Golos\\w+\\ufffd', 'Golosite', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Loc\\w+\\ufffd', 'Localita', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Loc\\w+\\ufffd', 'Localita', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
   }
 ]
