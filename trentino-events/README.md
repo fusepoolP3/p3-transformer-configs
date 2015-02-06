@@ -9,7 +9,7 @@ The data are about the events in the Province of Trento. The vocabularies used i
 
     rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     rdfs <http://www.w3.org/2000/01/rdf-schema#>  
-    geo <http://www.w3.org/2003/01/geo/wgs84_pos#>
+    wgs84 <http://www.w3.org/2003/01/geo/wgs84_pos#>
     xsd <http://www.w3.org/2001/XMLSchema#>  
     schema <http://schema.org/>
 
@@ -39,7 +39,7 @@ An example of the transformation result is given below
 
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-    @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+    @prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     @prefix schema: <http://schema.org/> .
 
@@ -57,8 +57,8 @@ An example of the transformation result is given below
                  schema:organizer <urn:organization:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> .
     <urn:location:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> rdf:type schema:Place ;
                  rdfs:label "Climbing Stadium" ;
-                 geo:lat "45.92413988812913"^^xsd:double ;
-                 geo:long  "10.890669822692871"^^xsd:double ;
+                 wgs84:lat "45.92413988812913"^^xsd:double ;
+                 wgs84:long  "10.890669822692871"^^xsd:double ;
                  schema:address <urn:address:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> ;
                  schema:event <urn:event:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> .
     <urn:address:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> rdf:type schema:PostalAddress ;
@@ -73,7 +73,7 @@ An example of the transformation result is given below
                  schema:telephone "+39 0544 502661" ;
                  schema:email "segreteria@federclimb.it" .
 
-The [schema.org](http://schema.org/) ontology is used to describe events, addresses, organizations and locations. The geographic coordinate in WGS84 are described using the [WGS4](http://www.w3.org/2003/01/geo/#vocabulary) ontology. 
+The [schema.org](http://schema.org/) ontology is used to describe events, addresses, organizations and locations. The geographic coordinates in WGS84 are described using the [WGS4](http://www.w3.org/2003/01/geo/#vocabulary) ontology. 
 
 ![Trentino Event Model](trentino_event_model.jpg)
 
