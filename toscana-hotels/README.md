@@ -94,7 +94,7 @@ Transformation rules are extracted from OpenRefine and saved in a JSON file, whi
 Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data:
 
 ```bash
-curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/hotels/strutture-transform.json"
+curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-hotels/strutture-transform.json"
 ```
 
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
