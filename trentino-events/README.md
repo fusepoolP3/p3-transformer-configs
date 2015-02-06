@@ -55,13 +55,18 @@ An example of the transformation result is given below
                  schema:endDate "2015-06-07"^^xsd:date ;
                  schema:location <urn:location:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> ;
                  schema:organizer <urn:organization:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> .
-    <urn:location:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> rdf:type schema:PostalAddress ;
+    <urn:location:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> rdf:type schema:Place ;
                  rdfs:label "Climbing Stadium" ;
-                 schema:addressLocality "Arco" ;
-                 schema:addressCountry "Italy" ;
-                 schema:streetAddress "Climbing Stadium" ;
                  geo:lat "45.92413988812913"^^xsd:double ;
-                 geo:long  "10.890669822692871"^^xsd:double .
+                 geo:long  "10.890669822692871"^^xsd:double ;
+                 schema:address <urn:address:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> ;
+                 schema:event <urn:event:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> .
+    <urn:address:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a> rdf:type schema:PostalAddress ;
+                 schema:streetAddress "Climbing Stadium" ;
+                 schema:addressLocality "Arco" ;
+                 schema:postalCode "38068 ;
+                 schema:addressCountry "Italy"@en ;
+                 schema:addressCountry "Italia"@it .
     <urn:organization:uuid:a46064c9-a87e-43b3-9cb1-3a4921a3e66a>  rdf:type schema:Organization ;
                  rdfs:label "Federazione Arrampicata Sportiva Italiana" ;
                  schema:name "Federazione Arrampicata Sportiva Italiana" ;
