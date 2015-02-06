@@ -1640,8 +1640,8 @@
 <urn:location:uuid:076ace33-163e-430c-a9f2-4bae5e4610a5> rdf:type schema:Place ;
             
             rdfs:label "Paesi della Val di Fassa" ;
-            geo:lat "46,4294175906960"^^xsd:double ;
-            geo:long  "11,6908264160156"^^xsd:double ;
+            geo:lat "46.4294175906960"^^xsd:double ;
+            geo:long  "11.6908264160156"^^xsd:double ;
             schema:event <urn:event:uuid:076ace33-163e-430c-a9f2-4bae5e4610a5> ;
             schema:address <urn:address:uuid:076ace33-163e-430c-a9f2-4bae5e4610a5> .
 <urn:address:uuid:076ace33-163e-430c-a9f2-4bae5e4610a5> rdf:type schema:PostalAddress ;
