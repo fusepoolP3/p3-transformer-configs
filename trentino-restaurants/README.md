@@ -123,7 +123,7 @@ Transformation rules are extracted from OpenRefine and saved in a JSON file, whi
 Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data as shown below:
 
 ```bash
-curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @Elenco_osterie_tipiche_civici.1386925759.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/trentino-restaurants/osterie-transform.json"
+curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @Elenco_osterie_tipiche_civici.1386925759.csv "http://hetzy1.spaziodati.eu:7100/?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/trentino-restaurants/osterie-transform.json"
 ```
 
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
@@ -147,16 +147,16 @@ expected result after cleaning is [Elenco_osterie_tipiche_civici.1386925759.clea
 
 #### 2. Transform cleaned data to RDF
 
-After cleaning the datset, we use the **Virtuoso CSV transformer** (http://fusepool.openlinksw.com/ext/csv) to transform it to RDF. The generated RDF can be requested as RDF/XML or Turtle (Example requests for both output types are shown below).
+After cleaning the dataset, we use the **Virtuoso CSV transformer** (http://fusepool.openlinksw.com/ext/csv) to transform it to RDF. The generated RDF can be requested as RDF/XML or Turtle (Example requests for both output types are shown below).
 
 **Trutle**
 ```bash
-curl -H "Content-Type: text/csv" -H "Accept: text/turtle"  -H "Content-Location: http://fusepool.openlinksw.com/trento/pub" --data-binary @Elenco_osterie_tipiche_civici.1386925759.cleaned.csv -X POST "http://fusepool.openlinksw.com/ext/csv" > Elenco_osterie_tipiche_civici.1386925759.csv.transformed.fusepool.ttl
+curl -i -H "Content-Type: text/csv" -H "Accept: text/turtle"  -H "Content-Location: http://fusepool.openlinksw.com/trento/pub" --data-binary @Elenco_osterie_tipiche_civici.1386925759.cleaned.csv -X POST "http://fusepool.openlinksw.com/ext/csv" > Elenco_osterie_tipiche_civici.1386925759.csv.transformed.fusepool.ttl
 ```
 
 **RDF/XML**
 ```bash
-curl -H "Content-Type: text/csv"  -H "Accept: application/rdf+xml" -H "Content-Location: http://fusepool.openlinksw.com/trento/pub" --data-binary @Elenco_osterie_tipiche_civici.1386925759.cleaned.csv -X POST "http://fusepool.openlinksw.com/ext/csv" > Elenco_osterie_tipiche_civici.1386925759.csv.transformed.fusepool.rdf
+curl -i -H "Content-Type: text/csv"  -H "Accept: application/rdf+xml" -H "Content-Location: http://fusepool.openlinksw.com/trento/pub" --data-binary @Elenco_osterie_tipiche_civici.1386925759.cleaned.csv -X POST "http://fusepool.openlinksw.com/ext/csv" > Elenco_osterie_tipiche_civici.1386925759.csv.transformed.fusepool.rdf
 ```
 which would return similar response:
 
