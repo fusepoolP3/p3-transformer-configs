@@ -1,15 +1,15 @@
-Transofrmer configuration for the Tuscany Accomodations dataset
+Transformer configuration for the Tuscany Accommodations dataset
 --------------------------------------------------------
 
 ## Input Data
 
-As input data we have a CSV file provided by the Toscana region, namely [strutture_ricettive_20141012.csv](http://dati.toscana.it/dataset/ceb33e9c-7c80-478a-a3be-2f3700a64906/resource/5e8ec560-cbe6-4630-b191-e274218c183c/download/strutturericettive20141012.csv)
+As input data we have a CSV file provided by the Tuscany region, namely [strutture_ricettive_20141012.csv](http://dati.toscana.it/dataset/ceb33e9c-7c80-478a-a3be-2f3700a64906/resource/5e8ec560-cbe6-4630-b191-e274218c183c/download/strutturericettive20141012.csv)
 
 >http://dati.toscana.it/dataset/rt-strutric
 
-This CSV dataset contains the names and contact details (address, phone, email, website) of all tourist accommodation in Tuscany, and includes ISTAT (Italian National Institute of Statistics) codes, accommodation type (hotels, cottages, campsites ..), star rating and the establishment's geo-coordinates.
+This CSV dataset contains the names and contact details (address, phone, email, website) of all tourist accommodation in Tuscany, and includes ISTAT (Italian National Institute of Statistics) codes, accommodation type (hotels, cottages, campsites), star rating and the establishment's geo-coordinates.
 
-Raw data has the following view (header, first line and a random line)
+Raw data has the following view (header and two lines)
 
 >| id   | codeserc      | tipologia   | nome      | indirizzo                         | cap   | citta    | provincia | stelle | email               | url             | lt    | lg    | telefono    |
 >|------|---------------|-------------|-----------|-----------------------------------|-------|----------|-----------|--------|---------------------|-----------------|-------|-------|-------------|
@@ -83,18 +83,18 @@ As far as possible the input has been mapped to schema.org types.
 
 **Cleaning** with [Batchrefine](https://github.com/fusepoolP3/p3-batchrefine)
 
- * change entries in coluumns "nome" and "indirizzo" from uppercase to CamelCase **_I MORICCI --> I Moricci_**  
- * apply rounding to "lt/lg" columns to 3 digits after decimal point: **_10.396000 -> 10.396_**  
- * in the dataset if number of stars is not applicable to the accomodation facility, column "stelle" has value 0. In this case we replace it with a blank cell.  
+ * change entries in columns "nome" and "indirizzo" from uppercase to titlecase **_I MORICCI --> I Moricci_**  
+ * apply rounding to "lt/lg" columns to 6 digits after decimal point: **_10.39658901498329400 -> 10.396589_**  
+ * in the dataset, if number of stars is not applicable to the accommodation facility, column "stelle" has value 0. In this case we want to replace it with a blank cell.  
 
-To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of [OpenRefine](https://github.com/OpenRefine/OpenRefine) to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
+To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of [OpenRefine](https://github.com/OpenRefine/OpenRefine) to prepare transformation rules that will be further passed to the transformer in as a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine can be found [here](https://github.com/andreybratus/tutorial).
 
 Transformation rules are extracted from OpenRefine and saved in a JSON file, which we also provide: [strutture-transform.json](strutture-transform.json)
 
 Pass transformation rules as a 'refinejson' query parameter to batchrefine together with the input data:
 
 ```bash
-curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-hotels/strutture-transform.json"
+curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/csv' --data-binary @strutturericettive20141012.csv "http://hetzy1.spaziodati.eu:7100/?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-hotels/strutture-transform.json"
 ```
 
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
@@ -121,7 +121,7 @@ expected result after cleaning is [strutturericettive-cleaned.csv](strutturerice
 
 **Transform to RDF** using Virtuoso CSV transformer
 
-To transform celaned data to RDF with Virtuoso CSV transformer use the following request:
+To transform cleaned data to RDF with Virtuoso CSV transformer use the following request:
 
 ```bash
 curl -i -H "Content-Type: text/csv" -H "Accept: application/rdf+xml" -H "Content-Location: http://fusepool.openlinksw.com/tuscany/accommodation" --data-binary @strutturericettive-cleaned.csv -X POST "http://fusepool.openlinksw.com/ext/csv"
@@ -141,7 +141,7 @@ Location: /ext/status/120
 Content-Length: 
 ```
 
-to retrieve data, construct the following request using the job id from Location header: *REMEMBER to use your job id*
+to retrieve data, construct the following request using the job id from Location header: **REMEMBER to use your job id**
 
 ```bash
 curl -X GET "http://fusepool.openlinksw.com/ext/status/120"
@@ -161,6 +161,6 @@ The Virtuoso CSV transformer requires no end-user configuration, insofar as the 
 
 ## Example Usages of the Data
 
-The "Tuscany Region - Accommodations" dataset archive could provide the basis for online services supporting the searching and booking of tourist accommodation. The geo-referenced establishments could also be represented on a map.
+The "Tuscany Region - Accommodations" dataset archive could provide the basis for online services supporting the searching and booking of tourist accommodation. It is of particular interest as it represent accomodation venues of various types. The geo-references can be exploited to represent establishments on a map.
 
 **TODO** Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
