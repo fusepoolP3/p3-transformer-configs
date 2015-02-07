@@ -1,13 +1,10 @@
-Transformer configuration for Museums dataset
+Transformer configuration for Tuscany Museums dataset
 ---------------------------------------------
 
 ## Input Data
 
-As input data we use a CSV file provided by the Toscana region, namely [musei.csv](musei.csv).
+As input data we use a CSV file provided by the Tuscany region, namely [musei.csv](musei.csv).
 > http://mappe.regione.toscana.it/db-webgis/musei/example_postgis.jsp?format=csv
-
->**An important notice** about this file is that it starts with two blank lines, which makes the file not compliant to CSV format [RFC 4180](https://datatracker.ietf.org/doc/rfc4180/). Currently I assume that we remove them manually, another possible workarounds:
->* Polish, fix and document [sed-transformer](https://github.com/fusepoolP3/p3-transformer-howto) that we can use to remove blank lines form files.
 
 This dataset aims at uncovering cultural locations in the region, mainly museums but also historical sights and monuments. Raw data has the following view (header and first line):
 
@@ -18,20 +15,25 @@ This dataset aims at uncovering cultural locations in the region, mainly museums
 
 Each line contains information about a historical/cultural sight: name, type (museum/monument), address (city, street) and GPS cordinates.
 
-We use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) to clean the dataset and to transform it into RDF.
+**An important observation** about this file is that it begins with two blank lines, which makes the file not compliant to CSV format [RFC 4180](https://datatracker.ietf.org/doc/rfc4180/).
 
-#### Cleaning 
-* change entries in "denominazione" column from uppercase to CamelCase: **_BATTISTERO DI PISA -> Battistero Di Pisa_**
+Therefore, we will use two transformers to process this file:
+1. [sed-transformer](https://github.com/fusepoolP3/p3-transformer-howto) is used to remove blank lines from the file.
+2. [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) to clean the dataset and to transform it into RDF.
 
-* apply rounding operation to "lat/lon" columns in order to have 6 digits after decimal point: **_10.39600013248 -> 10.396000_**
+#### Cleaning
+* Remove blank lines in a file using a stream editor.
+
+* Change entries in "denominazione" column from uppercase to CamelCase: **_BATTISTERO DI PISA -> Battistero Di Pisa_**.
+
+* Apply rounding operation to "lat/lon" columns in order to have 6 digits after decimal point: **_10.39600013248 -> 10.396000_**.
 
 #### RDF mapping
-For each of the historic sights we extract and map to RDF the following information:
+As far as possible the dataset has been mapped to the scheama.org:
 
-* Name of the location
-* Category
-* Address
-* Geographic coordinates (lat, long)
+* Geo coordinates are described in terms of WGS84
+* Addresses are mapped to schemaOrg:Address
+* Museum have been described as scheamaOrg:Museum
 
 ## Transformed Data
 
@@ -72,7 +74,13 @@ A snippet of the resulting transformation:
 
 ## Transformation Configuration
 
-To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of OpenRefine to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
+1. To use [sed-transformer](https://github.com/fusepoolP3/p3-transformer-howto) no special preconfigurations is required. It is configured using the 'script' query parameter. In this query parameter you pass the desired script that is supported by the [GNU sed](https://www.gnu.org/software/sed/manual). For example, to remove empty lines from a file we use the following expression: **'/^\s*$/d'**. An example request is shown below:
+
+```bash
+ curl -XPOST -H 'Content-Type: text/plain' --data-binary @musei.csv "http://hetzy1.spaziodati.eu:7101?script=/^\s*\$/d"
+```
+
+2. To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of OpenRefine to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
 
 Transformation rules are in the form of a JSON array and are saved in a file: [museums_transform.json](https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-museums/musei_transform.json).
 
