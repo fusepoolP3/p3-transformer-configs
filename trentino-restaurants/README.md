@@ -18,7 +18,7 @@ Nr;Comune;Insegna;Tipo;Frazione;Indirizzo ;Civico
 5;BESENELLO;LA RUPE DI BESE;Ristorante-Bar;Besenello;Via Castel Beseno;6
 8;CALAVINO;HOSTERIA TOBLISELLIPOINT;Ristorante-Bar;Sarche;Via Garda;3
 ```
-By looking at the raw data we can make several judgements:
+By looking at the raw data we can make several judgments:
 
 * it is a reasonably small dataset, having only 48 entries (lines)
 * the input dataset is structured correctly and doesn't contain errors
@@ -31,7 +31,7 @@ We apply two Fusepool transformers on this dataset:
 
 1. **Cleaning:** [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) to align the values in 'Nr' column with the real line number and to convert values in 'Comune', 'Insegna' columns to titlecase.
 
-2. **Transform to RDF:** Virtuoso RDF transforme http://fusepool.openlinksw.com/ext/csv is used to transform the cleaned dataset into RDF. Data can be transformed both to RDF/XML and Turtle. 
+2. **Transform to RDF:** Virtuoso RDF transformer http://fusepool.openlinksw.com/ext/csv is used to transform the cleaned dataset into RDF. Data can be transformed both to RDF/XML and Turtle. 
 
 ## Transformed Data
 
@@ -112,10 +112,10 @@ As far as possible the input has been mapped to schema.org types.
 
 **Cleaning** with [Batchrefine](https://github.com/fusepoolP3/p3-batchrefine)
 
-* change enntries in columns 'Comune' and 'Insegna' to titlecase: **BASELGA DI PINE' --> Baselga Di Pine'**
+* change entries in columns 'Comune' and 'Insegna' to titlecase: **BASELGA DI PINE' --> Baselga Di Pine'**
 * fix line number in 'Nr' column
 
-To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of [OpenRefine](https://github.com/OpenRefine/OpenRefine) to prepare transformation rules that will be further passed to the transformer in a query parameter.
+To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is required. We use GUI of [OpenRefine](https://github.com/OpenRefine/OpenRefine) to prepare transformation rules that will be further passed to the transformer in a query parameter.
 A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
 
 Transformation rules are extracted from OpenRefine and saved in a JSON file, which we also provide: [osterie-transform.json](osterie-transform.json)
@@ -193,6 +193,6 @@ The Virtuoso CSV transformer requires no end-user configuration, and so far as t
 
 ## Example Usages of the Data
 
-The Trentino taverns datase providesa the basis for online services supporting the searching and booking of local taverns.
+Though the Trentino taverns dataset is of a modest size and provides scarce information, it represents venues that serve typical food of Trentino region. It can be used as a basis for online services supporting an end user with searching and booking of local taverns and providing a guarantee of the best food quality.
 
 *TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
