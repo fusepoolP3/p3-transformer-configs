@@ -48,7 +48,6 @@ A snippet of the resulting transformation:
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-
 <http://fusepool.eu/museum/id/5001> a rdf:type , schema:Museum ;
 	rdfs:label "Battistero Di Pisa" ;
 	schema:Location <http://fusepool.eu/museum/location/5001> ;
@@ -56,7 +55,7 @@ A snippet of the resulting transformation:
 	schema:Category "Arte" .
 
 <http://fusepool.eu/museum/location/5001> a rdf:type , schema:Address ;
-	geo:lat "43.723" ;
+	geo:lat "43.722648" ;
 	geo:long "10.396" ;
 	schema:StreetAddress "Piazza del Duomo " .
 
@@ -67,9 +66,20 @@ A snippet of the resulting transformation:
 	schema:Category "Arte" .
 
 <http://fusepool.eu/museum/location/5004> a rdf:type , schema:Address ;
-	geo:lat "43.723" ;
+	geo:lat "43.722648" ;
 	geo:long "10.396" ;
 	schema:StreetAddress "Piazza del Duomo " .
+
+<http://fusepool.eu/museum/id/5986> a rdf:type , schema:Museum ;
+	rdfs:label "Casa Del Boccaccio" ;
+	schema:Location <http://fusepool.eu/museum/location/5986> ;
+	schema:VenueType "Museo" ;
+	schema:Category "Storia" .
+
+<http://fusepool.eu/museum/location/5986> a rdf:type , schema:Address ;
+	geo:lat "43.547405" ;
+	geo:long "11.041373" ;
+	schema:StreetAddress "Via Boccaccio " .
 ```
 
 ## Transformation Configuration
@@ -77,7 +87,7 @@ A snippet of the resulting transformation:
 1. To use [sed-transformer](https://github.com/fusepoolP3/p3-transformer-howto) no special preconfigurations is required. It is configured using the 'script' query parameter. In this query parameter you pass the desired script that is supported by the [GNU sed](https://www.gnu.org/software/sed/manual). For example, to remove empty lines from a file we use the following expression: **'/^\s*$/d'**. An example request is shown below:
 
 ```bash
- curl -XPOST -H 'Content-Type: text/plain' --data-binary @musei.csv "http://hetzy1.spaziodati.eu:7101?script=/^\s*\$/d"
+ curl -i -XPOST -H 'Content-Type: text/plain' --data-binary @musei.csv "http://hetzy1.spaziodati.eu:7101?script=/^\s*\$/d"
 ```
 
 2. To use [Batchrefine transformer](https://github.com/fusepoolP3/p3-batchrefine) a transform configuration is rquired. We use GUI of OpenRefine to prepare transformation rules that will be further passed to the transformer in a query parameter. A brief tutorial how to design and extract transformation rules from OpenRefine that can be found [here](https://github.com/andreybratus/tutorial).
@@ -90,7 +100,7 @@ Transformation rules are in the form of a JSON array and are saved in a file: [m
 Transformation rules are passed as a 'refinejson' query parameter to the transformer together with input data:
 
 ```bash
-	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @/home/andrey/musei.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-museums/musei_transform.json"
+	curl -i -XPOST -H 'Content-Type:text/csv' -H 'Accept:text/turtle' --data-binary @musei-noblank.csv "http://hetzy1.spaziodati.eu:7100?refinejson=https://raw.githubusercontent.com/fusepoolP3/p3-transformer-configs/master/toscana-museums/musei_transform.json"
 ```
 http://hetzy1.spaziodati.eu:7100 is a public instance of asynchronous Batchrefine transformer, which would return similar response:
 

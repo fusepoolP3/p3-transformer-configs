@@ -38,42 +38,39 @@ As far as possible the input has been mapped to schema.org types.
 	xmlns:schema="http://schema.org/"
 	xmlns:oplbase="http://www.openlinksw.com/schemas/oplbase#"
 	xmlns:ns10="http://fusepool.openlinksw.com/about/id/http/fusepool.openlinksw.com/tuscany/accommodation#" >
-
-<rdf:Description rdf:about="http://fusepool.openlinksw.com/entity#Accommodation_1158">
+	...
+ <rdf:Description rdf:about="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1158">
     <rdf:type rdf:resource="http://schema.org/Hotel" />
     <rdf:type rdf:resource="http://schema.org/LodgingBusiness" />
     <rdfs:label>Corte Dei Butteri</rdfs:label>
-    <geo:lat>42.56</geo:lat>
-    <geo:long>11.17</geo:long>
+    <geo:lat>42.564894</geo:lat>
+    <geo:long>11.171481</geo:long>
     <schema:name>Corte Dei Butteri</schema:name>
-    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/entity" />
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/tuscany/accommodation" />
     <oplbase:id>1158</oplbase:id>
-    <schema:address rdf:resource="http://fusepool.openlinksw.com/entity#Accommodation_1158_Addr" />
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1158_Addr" />
     <schema:description>Alberghi - Hotel</schema:description>
     <schema:url>www.aurumhotels.it</schema:url>
-    <schema:geo rdf:resource="http://fusepool.openlinksw.com/entity#Accommodation_1158_GeoCoords" />
+    <schema:geo rdf:resource="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1158_GeoCoords" />
     <ns10:codeserc>053018ALB0011</ns10:codeserc>
     <ns10:stelle>4</ns10:stelle>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://fusepool.openlinksw.com/entity#Accommodation_1158_GeoCoords">
-    <rdf:type rdf:resource="http://schema.org/GeoCoordinates" />
-    <rdfs:label>42.56, 11.17</rdfs:label>
-    <schema:latitude>42.56</schema:latitude>
-    <schema:longitude>11.17</schema:longitude>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://fusepool.openlinksw.com/entity#Accommodation_1158_Addr">
-    <rdf:type rdf:resource="http://schema.org/PostalAddress" />
-    <rdfs:label>S.Statale Aurelia 229/231 - Osa - Fonteblanda, Orbetello</rdfs:label>
-    <schema:streetAddress>S.Statale Aurelia 229/231 - Osa - Fonteblanda, Orbetello</schema:streetAddress>
-    <schema:addressLocality>Orbetello</schema:addressLocality>
-    <schema:Country>IT</schema:Country>
-    <schema:addressRegion>GR</schema:addressRegion>
-    <schema:email>info@aurumhotels.it</schema:email>
-    <schema:telephone>0564 885546</schema:telephone>
-</rdf:Description>
-  
+  </rdf:Description>
+  <rdf:Description rdf:about="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1178">
+    <rdf:type rdf:resource="http://schema.org/Hotel" />
+    <rdf:type rdf:resource="http://schema.org/LodgingBusiness" />
+    <rdfs:label>Hotel Fontermosa</rdfs:label>
+    <geo:lat>42.564894</geo:lat>
+    <geo:long>11.171481</geo:long>
+    <schema:name>Hotel Fontermosa</schema:name>
+    <sioc:has_container rdf:resource="http://fusepool.openlinksw.com/about/id/entity/http/fusepool.openlinksw.com/tuscany/accommodation" />
+    <oplbase:id>1178</oplbase:id>
+    <schema:address rdf:resource="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1178_Addr" />
+    <schema:description>Alberghi - Hotel</schema:description>
+    <schema:url>www.fontermosa.it</schema:url>
+    <schema:geo rdf:resource="http://fusepool.openlinksw.com/tuscany/accommodation#Accommodation_1178_GeoCoords" />
+    <ns10:codeserc>053018ALB0031</ns10:codeserc>
+    <ns10:stelle>4</ns10:stelle>
+  </rdf:Description>
 ```
 
 ## Transformation Configuration
