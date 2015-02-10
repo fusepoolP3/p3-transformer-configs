@@ -188,6 +188,8 @@ The Virtuoso CSV transformer requires no end-user configuration, insofar as the 
 
 The Toscana restaurants dataset provides an immense collection of records representing "restaurants" and "botegas" in the region. The provided information can be used as a basis for online services that facilitate booking and promotion of tourist attractions in the region. By exploiting the geographic locations a user may receive suggestions about nearby restaurants and use the contact information to book a table for dinner.
 
+An example SPARQL query returns Name, telephone number and geographic cordinates of all the restaurants located in "Firenze" city. The query and a snippet of the output result are presented below:
+
 ```SPARQL
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
@@ -206,5 +208,11 @@ WHERE {
 ORDER BY ?name
 ```
 
+| name                          | telephone  | lat       | long      |
+|-------------------------------|------------|-----------|-----------|
+| Acconci Albergo Ristorante    | 3383481933 | 44.118527 | 11.37947  |
+| Albego Trattoria La Bruna     | 55406614   | 43.896056 | 11.321064 |
+| Albergo Trattoria La Bruna    | 55406614   | 43.896056 | 11.321064 |
+| Antica Macelleria Falorni Snc | 55853029   | 43.582435 | 11.316883 |
 
-*TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
+The presented datset can be also combined with information from datasets containing data about other points of interest in the nearby location. Such advantage can be leverage to provide users with better suggestions about the tourist attractions and directions when traveling in the region.

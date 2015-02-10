@@ -123,7 +123,8 @@ to retrieve data, construct the following request using the job id from Location
 ## Example Usages of the Data
 
 This dataset can be used to find historical sights situated around (nearby) a given location.
-Moreover it can be combined with datasets containing other points of interst in the same region which are also represented by geographical coordinates (accomodations, restaurants).
+
+An example SPARQL query returns Name, address and geographic cordinates of all the historic sights situated in "Firenze" city. The query and a snippet of the output result are presented below:
 
 ```SPARQL
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -142,6 +143,11 @@ WHERE {
 }
 ORDER BY ?name
 ```
+| name                                 | strAddress          | lat       | long      |
+|--------------------------------------|---------------------|-----------|-----------|
+| Associazione Mus.E                   | Piazza Signoria 1   | 43.769337 | 11.255273 |
+| Basilica Di San Lorenzo              | Piazza San Lorenzo  | 43.77534  | 11.254294 |
+| Battistero Di San Giovanni A Firenze | Piazza San Giovanni | 43.772788 | 11.254908 |
+| Campanile Di Giotto                  | Piazza del Duomo    | 43.773562 | 11.256578 |
 
-
-*TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
+Moreover, this dataset can be combined with datasets containing other points of interst in the same region which are also represented by geographical coordinates (accomodations, restaurants, events, etc).
