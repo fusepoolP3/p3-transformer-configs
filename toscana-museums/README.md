@@ -125,4 +125,23 @@ to retrieve data, construct the following request using the job id from Location
 This dataset can be used to find historical sights situated around (nearby) a given location.
 Moreover it can be combined with datasets containing other points of interst in the same region which are also represented by geographical coordinates (accomodations, restaurants).
 
+```SPARQL
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?name ?strAddress ?lat ?long
+FROM <http://sandbox.fusepool.info:8181/ldp/toscana-museums-2/museums-new-csv-transformed>
+WHERE {
+  ?museum schema:address ?address ;
+              schema:name ?name ;              
+              geo:lat ?lat ;
+              geo:long ?long .
+  ?address schema:addressRegion "Firenze" ;
+           schema:streetAddress ?strAddress .
+}
+ORDER BY ?name
+```
+
+
 *TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
