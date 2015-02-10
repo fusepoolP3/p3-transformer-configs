@@ -188,4 +188,23 @@ The Virtuoso CSV transformer requires no end-user configuration, insofar as the 
 
 The Toscana restaurants dataset provides an immense collection of records representing "restaurants" and "botegas" in the region. The provided information can be used as a basis for online services that facilitate booking and promotion of tourist attractions in the region. By exploiting the geographic locations a user may receive suggestions about nearby restaurants and use the contact information to book a table for dinner.
 
+```SPARQL
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?name ?telephone ?lat ?long 
+FROM <http://sandbox.fusepool.info:8181/ldp/toscana-restaurants-1/K-csv-transformed>
+WHERE {
+  ?restaurant schema:address ?address ;
+              schema:name ?name ;              
+              geo:lat ?lat ;
+              geo:long ?long .
+  ?address schema:addressRegion "Firenze" ;
+           schema:telephone ?telephone .
+}
+ORDER BY ?name
+```
+
+
 *TODO* Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
