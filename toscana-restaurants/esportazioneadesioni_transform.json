@@ -1,39 +1,149 @@
 [
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column TIPOLOGIA using expression value.toTitlecase()",
+    "description": "Text transform on cells in column NOME using expression grel:value.replace(\"\\\"\",\"\")",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "TIPOLOGIA",
+    "columnName": "NOME",
+    "expression": "grel:value.replace(\"\\\"\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NOME using expression grel:value.replace(\"\\'\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOME",
+    "expression": "grel:value.replace(\"\\'\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column VIA using expression grel:value.replace(\"\\\"\",\"\").toTitlecase().replace(\"\\'\",\"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "grel:value.replace(\"\\\"\",\"\").toTitlecase().replace(\"\\'\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CITTA' using expression value.toTitlecase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CITTA'",
     "expression": "value.toTitlecase()",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
+    "op": "core/column-rename",
+    "description": "Rename column CITTA' to CITTA",
+    "oldColumnName": "CITTA'",
+    "newColumnName": "CITTA"
+  },
+  {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column NOME using expression value.trim()",
+    "description": "Text transform on cells in column EMAIL using expression grel:value.replace(\"�\",\"@\")",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "NOME",
-    "expression": "value.trim()",
+    "columnName": "EMAIL",
+    "expression": "grel:value.replace(\"�\",\"@\")",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column NOME using expression grel:value.replace(\"\\\"\",\"\").replace(\"\\'\",\"\")",
+    "description": "Text transform on cells in column LAT using expression grel:if (value != \"-0\",value,null).toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LAT",
+    "expression": "grel:if (value != \"-0\",value,null).toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column LONG using expression grel:if (value !=\"-0\",value,null).toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONG",
+    "expression": "grel:if (value !=\"-0\",value,null).toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column LAT using expression jython:return round(value,6)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LAT",
+    "expression": "jython:return round(value,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column LONG using expression jython:return round(value,6)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONG",
+    "expression": "jython:return round(value,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CITTA using expression jython:import re \ng = re.sub(u'Local\\w+\\ufffd', 'Localita', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CITTA",
+    "expression": "jython:import re \ng = re.sub(u'Local\\w+\\ufffd', 'Localita', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NOME using expression jython:import re \ng = re.sub(u'Ca\\w+\\ufffd', 'Caffe', value)\nreturn g",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "NOME",
-    "expression": "grel:value.replace(\"\\\"\",\"\").replace(\"\\'\",\"\")",
+    "expression": "jython:import re \ng = re.sub(u'Ca\\w+\\ufffd', 'Caffe', value)\nreturn g",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
@@ -53,31 +163,12 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column VIA using expression value.toTitlecase()",
+    "description": "Text transform on cells in column TIPOLOGIA using expression value.toTitlecase()",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "VIA",
-    "expression": "value.toTitlecase()",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/column-rename",
-    "description": "Rename column CITTA' to CITTA",
-    "oldColumnName": "CITTA'",
-    "newColumnName": "CITTA"
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column CITTA using expression value.toTitlecase()",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "CITTA",
+    "columnName": "TIPOLOGIA",
     "expression": "value.toTitlecase()",
     "onError": "keep-original",
     "repeat": false,
@@ -85,221 +176,104 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column EMAIL using expression value.trim()",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "EMAIL",
-    "expression": "value.trim()",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column EMAIL using expression value.trim()",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "EMAIL",
-    "expression": "value.trim()",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column EMAIL using expression value.replace(/\\s+/,' ')",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "EMAIL",
-    "expression": "value.replace(/\\s+/,' ')",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column EMAIL using expression grel:value.replace(\"�\",\"@\")",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "EMAIL",
-    "expression": "grel:value.replace(\"�\",\"@\")",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column LAT using expression grel:if(value == \"-0\",null,value)",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "LAT",
-    "expression": "grel:if(value == \"-0\",null,value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column LONG using expression grel:if(value == \"-0\",null,value)",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "LONG",
-    "expression": "grel:if(value == \"-0\",null,value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column LAT using expression jython:return round(float(value),6)",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "LAT",
-    "expression": "jython:return round(float(value),6)",
-    "onError": "set-to-blank",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column LONG using expression jython:return round(float(value),6)",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "LONG",
-    "expression": "jython:return round(float(value),6)",
-    "onError": "set-to-blank",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(\" - \",\"\\n\")",
+    "description": "Text transform on cells in column TELEFONO using expression jython:import re\ng = re.sub(r'[^\\d\\-]',\"\",value)\nreturn g.replace(\"-\",\" ; \")",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "TELEFONO",
-    "expression": "grel:value.replace(\" - \",\"\\n\")",
+    "expression": "jython:import re\ng = re.sub(r'[^\\d\\-]',\"\",value)\nreturn g.replace(\"-\",\" ; \")",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/\\p{Punct}/,'').replace(' ','')",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "TELEFONO",
-    "expression": "grel:value.replace(/\\p{Punct}/,'').replace(' ','')",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:if (value.length() < 9,null,value)",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "TELEFONO",
-    "expression": "grel:if (value.length() < 9,null,value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.split(\" \")[0].split(\"\\n\")[0]",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "TELEFONO",
-    "expression": "grel:value.split(\" \")[0].split(\"\\n\")[0]",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column FAX using expression grel:value.replace(\"![0-9]\",'').replace(\".\",\"\").replace(\" \",\"\")",
+    "description": "Text transform on cells in column FAX using expression jython:import re\ng = re.sub(r'[^\\d\\-]',\"\",value)\nreturn g.replace(\"-\",\" ; \")",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "FAX",
-    "expression": "grel:value.replace(\"![0-9]\",'').replace(\".\",\"\").replace(\" \",\"\")",
-    "onError": "keep-original",
+    "expression": "jython:import re\ng = re.sub(r'[^\\d\\-]',\"\",value)\nreturn g.replace(\"-\",\" ; \")",
+    "onError": "set-to-blank",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:if(startsWith(value,\"39\"),substring(value,3),value)",
+    "description": "Text transform on cells in column CITTA using expression jython:import re\ng = re.sub(u'Cit\\w+\\ufffd', 'Citta', value)\nreturn g",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "TELEFONO",
-    "expression": "grel:if(startsWith(value,\"39\"),substring(value,3),value)",
+    "columnName": "CITTA",
+    "expression": "jython:import re\ng = re.sub(u'Cit\\w+\\ufffd', 'Citta', value)\nreturn g",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:substring(value, 0, 10)",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\ng = re.sub(u'Dellu\\w+\\ufffd', 'Dellunita', value)\nreturn g",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "TELEFONO",
-    "expression": "grel:substring(value, 0, 10)",
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\ng = re.sub(u'Dellu\\w+\\ufffd', 'Dellunita', value)\nreturn g",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column TELEFONO using expression grel:if (length(value) < 10,null,value)",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Fag\\w+\\ufffd', 'Fagaro', value)\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\nreturn g",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "TELEFONO",
-    "expression": "grel:if (length(value) < 10,null,value)",
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Fag\\w+\\ufffd', 'Fagaro', value)\ng = re.sub(u'Liber\\w+\\ufffd', 'Liberta', value)\nreturn g",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column NOME using expression grel:value.replace(\"�\",\"e\")",
+    "description": "Text transform on cells in column NOME using expression jython:import re\ng = re.sub(u'Zaz\\w+\\ufffd', 'Zazza', value)\ng = re.sub(u'Me\\w+\\ufffd\\w', 'Meles', value)\nreturn g",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "NOME",
-    "expression": "grel:value.replace(\"�\",\"e\")",
+    "expression": "jython:import re\ng = re.sub(u'Zaz\\w+\\ufffd', 'Zazza', value)\ng = re.sub(u'Me\\w+\\ufffd\\w', 'Meles', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NOME using expression jython:import re\ng = re.sub(u'Bon\\w+\\ufffd', 'Bonta', value)\ng = re.sub(u'Golos\\w+\\ufffd', 'Golosite', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOME",
+    "expression": "jython:import re\ng = re.sub(u'Bon\\w+\\ufffd', 'Bonta', value)\ng = re.sub(u'Golos\\w+\\ufffd', 'Golosite', value)\nreturn g",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column VIA using expression jython:import re\ng = re.sub(u'Loc\\w+\\ufffd', 'Localita', value)\nreturn g",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "jython:import re\ng = re.sub(u'Loc\\w+\\ufffd', 'Localita', value)\nreturn g",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10

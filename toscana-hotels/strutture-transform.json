@@ -79,26 +79,26 @@
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column lt using expression jython:return round(value,2)",
+    "description": "Text transform on cells in column lt using expression jython:return round(value,6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "lt",
-    "expression": "jython:return round(value,2)",
+    "expression": "jython:return round(value,6)",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
   },
   {
     "op": "core/text-transform",
-    "description": "Text transform on cells in column lg using expression jython:return round(value,2)",
+    "description": "Text transform on cells in column lg using expression jython:return round(value,6)",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
     "columnName": "lg",
-    "expression": "jython:return round(value,2)",
+    "expression": "jython:return round(value,6)",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
