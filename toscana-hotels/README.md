@@ -160,4 +160,22 @@ The Virtuoso CSV transformer requires no end-user configuration, insofar as the 
 
 The "Tuscany Region - Accommodations" dataset archive could provide the basis for online services supporting the searching and booking of tourist accommodation. It is of particular interest as it represent accomodation venues of various types. The geo-references can be exploited to represent establishments on a map.
 
-**TODO** Describe how the result data can be used (e.g. by a SPARQL query). This SHOULD also include examples on how this dataset can be combined with other data.
+An example SPARQL query retrieves all the entries (hotels) that have "FI" as their province code and shows their "Name, address, and geo cordinates"
+
+```SPARQL
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?name ?strAddress ?lat ?long
+FROM <http://sandbox.fusepool.info:8181/ldp/toscana-accommodations-1/ly-csv-transformed>
+WHERE {
+  ?accommodation schema:address ?address ;
+                 schema:name ?name ;
+                 geo:lat ?lat ;
+                 geo:long ?long .
+  ?address schema:addressRegion "FI" ;
+           schema:streetAddress ?strAddress .
+}
+ORDER BY ?name
+```
