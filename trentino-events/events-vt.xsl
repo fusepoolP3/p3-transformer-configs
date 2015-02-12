@@ -8,7 +8,7 @@
   <xsl:template match="/">
 # RDF data transformed from the data set available at the url
 # http://www.visittrentino.it/media/eventi/eventi.xml
-# xslt version 1.0.0-20150206_1
+# xslt version 1.0.0-20150212_1
 
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -21,6 +21,8 @@
   <xsl:template match="events">
         <xsl:variable name="apos"><xsl:text>'</xsl:text></xsl:variable>
         <xsl:variable name="double_quote"><xsl:text>"</xsl:text></xsl:variable>
+        <xsl:variable name="comma"><xsl:text>,</xsl:text></xsl:variable>
+        <xsl:variable name="point"><xsl:text>.</xsl:text></xsl:variable>
         <xsl:variable name="stripHTML"><![CDATA[<\s*\w.*?>|<\s*/\s*\w\s*.*?>]]></xsl:variable>
        <xsl:for-each select="event">
 &lt;urn:event:uuid:<xsl:value-of select="alfId"/>&gt; rdf:type schema:Event ;
@@ -70,8 +72,8 @@
 &lt;urn:location:uuid:<xsl:value-of select="alfId"/>&gt; rdf:type schema:Place ;
             <xsl:variable name="location" select="eventLocation/value[@xml:lang='it']" />
             rdfs:label "<xsl:value-of select="translate($location,$double_quote,$apos)"/>" ;
-            geo:lat "<xsl:value-of select="coordinates/latitude"/>"^^xsd:double ;
-            geo:long  "<xsl:value-of select="coordinates/longitude"/>"^^xsd:double ;
+            geo:lat "<xsl:value-of select="translate(coordinates/latitude,$comma,$point)"/>"^^xsd:double ;
+            geo:long  "<xsl:value-of select="translate(coordinates/longitude,$comma,$point)"/>"^^xsd:double ;
             schema:event &lt;urn:event:uuid:<xsl:value-of select="alfId"/>&gt; ;
             schema:address &lt;urn:address:uuid:<xsl:value-of select="alfId"/>&gt; .
 &lt;urn:address:uuid:<xsl:value-of select="alfId"/>&gt; rdf:type schema:PostalAddress ;
