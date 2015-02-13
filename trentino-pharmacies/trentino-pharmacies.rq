@@ -4,17 +4,19 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX schema: <http://schema.org/>
-
-SELECT ?label ?lat ?long ?street ?location ?region ?postecode
+select ?label ?lat ?long ?street
+from <http://mydata.org/farmacie>
 {
-   ?pharm rdf:type schema:Pharmacy ;
-          rdfs:label ?label ;
-          geo:lat ?lat ;
-          geo:long ?long ;
-          schema:address ?address .
-   ?address rdf:type schema:PostalAddress ;
-          schema:streetAddress ?street ;
-          schema:addressLocality ?location ;
-          schema:addressRegion ?region ;
-          schema:postalCode ?postecode .
+?pharm rdf:type schema:Pharmacy ;
+   rdfs:label ?label ;
+   schema:address ?address ;
+   geo:lat ?lat ;
+   geo:long ?long .
+?address rdf:type schema:PostalAddress ;
+   schema:streetAddress ?street ;
+   schema:addressLocality ?location ;
+   schema:addressRegion ?region ;
+   schema:postalCode ?postecode ;
+
+   FILTER(?lat >= "46.150"^^xsd:double && ?lat <= "46.200"^^xsd:double && ?long >= "11.100"^^xsd:double && ?long <= "11.150"^^xsd:double)
 }

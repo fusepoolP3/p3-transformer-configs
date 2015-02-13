@@ -48,7 +48,7 @@ A README file with instructions on how to use the transformer is available at th
     <urn:uuid:fusepoolp3:pharmacy:4054> schema:address <urn:uuid:fusepoolp3:pharmacy:address:0> ;  
          rdfs:label "Farmacia SILVESTRI LUCIANA" .  
 
-An example SPARQL query is given below
+An example SPARQL query that filters pharmacies within a bounding box is given below
 
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -58,14 +58,16 @@ An example SPARQL query is given below
     PREFIX schema: <http://schema.org/>
     SELECT *
     {
-       ?pharm rdf:type schema:Pharmacy ;
-              rdfs:label ?label ;
-              geo:lat ?lat ;
-              geo:long ?long ;
-              schema:address ?address .
-       ?address rdf:type schema:PostalAddress ;
-                schema:streetAddress ?street ;
-                schema:addressLocality ?location ;
-                schema:addressRegion ?region ;
-                schema:postalCode ?postecode .
+      ?pharm rdf:type schema:Pharmacy ;
+      rdfs:label ?label ;
+      schema:address ?address ;
+      geo:lat ?lat ;
+      geo:long ?long .
+      ?address rdf:type schema:PostalAddress ;
+      schema:streetAddress ?street ;
+      schema:addressLocality ?location ;
+      schema:addressRegion ?region ;
+      schema:postalCode ?postecode ;
+
+      FILTER(?lat >= "46.150"^^xsd:double && ?lat <= "46.200"^^xsd:double && ?long >= "11.100"^^xsd:double && ?long <= "11.150"^^xsd:double)
     }
