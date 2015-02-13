@@ -58,16 +58,16 @@ An example SPARQL query that filters pharmacies within a bounding box is given b
     PREFIX schema: <http://schema.org/>
     SELECT *
     {
-      ?pharm rdf:type schema:Pharmacy ;
-      rdfs:label ?label ;
-      schema:address ?address ;
-      geo:lat ?lat ;
-      geo:long ?long .
+      ?pharm rdf:type schema:Pharmacy ;  
+             rdfs:label ?label ;
+             schema:address ?address ;
+             geo:lat ?lat ;
+             geo:long ?long .
       ?address rdf:type schema:PostalAddress ;
-      schema:streetAddress ?street ;
-      schema:addressLocality ?location ;
-      schema:addressRegion ?region ;
-      schema:postalCode ?postecode ;
+             schema:streetAddress ?street ;
+             schema:addressLocality ?location ;
+             schema:addressRegion ?region ;
+             schema:postalCode ?postecode ;
 
       FILTER(?lat >= "46.150"^^xsd:double && ?lat <= "46.200"^^xsd:double && ?long >= "11.100"^^xsd:double && ?long <= "11.150"^^xsd:double)
     }
