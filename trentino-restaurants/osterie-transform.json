@@ -82,5 +82,133 @@
     "op": "core/column-removal",
     "description": "Remove column json",
     "columnName": "json"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://sandbox.fusepool.info:8181/ldp/trentino-restaurants/osterie-csv.csv#",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "sdo",
+          "uri": "http://schema.org/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "'http://sandbox.fusepool.info:8181/ldp/trentino-restaurants/osterie-csv.csv#restaurant_' + value",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://schema.org/Restaurant",
+              "curie": "sdo:Restaurant"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://schema.org/name",
+              "curie": "sdo:name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Insegna"
+              }
+            },
+            {
+              "uri": "http://schema.org/address",
+              "curie": "sdo:address",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'http://sandbox.fusepool.info:8181/ldp/trentino-restaurants/osterie-csv.csv#restaurant_' + value + \"_address\"",
+                "isRowNumberCell": true,
+                "rdfTypes": [
+                  {
+                    "uri": "http://schema.org/PostalAddress",
+                    "curie": "sdo:PostalAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://schema.org/addressLocality",
+                    "curie": "sdo:addressLocality",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "columnName": "Frazione"
+                    }
+                  },
+                  {
+                    "uri": "http://schema.org/streetAddress",
+                    "curie": "sdo:streetAddress",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "cells[\"Indirizzo\"].value + \" \" + cells[\"Civico\"].value",
+                      "isRowNumberCell": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://schema.org/geo",
+              "curie": "sdo:geo",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'http://sandbox.fusepool.info:8181/ldp/trentino-restaurants/osterie-csv.csv#restaurant_' + value + '_coords'",
+                "isRowNumberCell": true,
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://schema.org/latitude",
+                    "curie": "sdo:latitude",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                      "columnName": "latitude"
+                    }
+                  },
+                  {
+                    "uri": "http://schema.org/longitude",
+                    "curie": "sdo:longitude",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                      "columnName": "longitude"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
