@@ -98,12 +98,12 @@
           "uri": "http://xmlns.com/foaf/0.1/"
         },
         {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
           "name": "xsd",
           "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
         },
         {
           "name": "rdf",
@@ -179,7 +179,12 @@
                 "nodeType": "cell-as-resource",
                 "expression": "'http://sandbox.fusepool.info:8181/ldp/trentino-restaurants/osterie-csv.csv#restaurant_' + value + '_coords'",
                 "isRowNumberCell": true,
-                "rdfTypes": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://schema.org/GeoCoordinates",
+                    "curie": "sdo:GeoCoordinates"
+                  }
+                ],
                 "links": [
                   {
                     "uri": "http://schema.org/latitude",
