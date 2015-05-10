@@ -1,0 +1,102 @@
+
+<Silk>
+    <!--
+    Interlink authors of books or articles from the Museo Galileo in Florence with DBpedia.org
+    version: 20150511
+    -->
+    <Prefixes>
+        <Prefix namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" id="rdf"/>     
+        <Prefix namespace="http://www.w3.org/2001/XMLSchema#" id="xsd"/>
+        <Prefix namespace="http://www.w3.org/2000/01/rdf-schema#" id="rdfs"/>
+        <Prefix namespace="http://www.w3.org/2002/07/owl#" id="owl"/>
+        <Prefix namespace="http://www.w3.org/2003/01/geo/wgs84_pos#" id="geo"/>        
+        <Prefix namespace="http://schema.org/" id="schema"/>
+        <Prefix namespace="http://dbpedia.org/ontology/" id="dbpedia-owl"/>
+        <Prefix namespace="http://dbpedia.org/resource/" id="dbpedia"/>
+        <Prefix namespace="http://dbpedia.org/property/" id="dbpprop"/>
+        <Prefix namespace="http://purl.org/dc/terms/" id="dcterms"/>
+        <Prefix namespace="http://xmlns.com/foaf/0.1/" id="foaf"/>
+    </Prefixes>
+    <DataSources>
+        <DataSource id="source" type="file">
+            <Param name="file" value="/home/luigi/jena/jena-fuseki-1.1.1/Data/minerva-dataset.nt"/>
+            <Param name="format" value="N-TRIPLES"/>
+        </DataSource>
+        <DataSource id="target" type="sparqlEndpoint">
+            <Param name="endpointURI" value="http://dbpedia.org/sparql" />
+            <Param name="pageSize" value="5000" />
+        </DataSource>  
+    </DataSources>
+    <Blocking blocks="10" />
+    <Interlinks>
+        <Interlink id="authors">
+            <LinkType>owl:sameAs</LinkType>
+            <SourceDataset dataSource="source" var="s_author">
+                <RestrictTo>
+                  ?s dcterms:creator ?s_author .
+                  ?s_author rdf:type foaf:Person .
+                  ?s_author foaf:name ?name .
+                  ?s_author dcterms:date ?date .
+                  FILTER(regex(?date,"^[0-9]{4}-[0-9]{4}$"))
+                </RestrictTo>
+            </SourceDataset>
+            <TargetDataset dataSource="target" var="t_author">
+                <RestrictTo>
+                    ?t_author rdf:type foaf:Person .
+                    ?t_author foaf:name ?name .
+                    ?t_author dbpedia-owl:birthDate ?birthDate .
+                    ?t_author dbpedia-owl:deathDate ?deathDate .
+                </RestrictTo>
+            </TargetDataset>
+            <LinkageRule>
+                 <Aggregate type="average">
+                    <!-- Compare authors name -->
+                    <Compare metric="softjaccard" threshold="0.1">
+                        <TransformInput function="tokenize">
+			    <Input path="?s_author/foaf:name" />
+                        </TransformInput>
+                        <TransformInput function="tokenize">
+			    <Input path="?t_author/foaf:name" />
+                        </TransformInput>
+                    </Compare>
+                    <!-- Compare authors birth year -->
+                    <Compare metric="inequality" threshold="1">
+                        <TransformInput function="filterByRegex">  
+                            <Input path="?s_author/dcterms:date" />
+                            <Param name="regex" value="^[0-9]{4}" />
+                        </TransformInput>
+                        <TransformInput function="substring">
+                            <Input path="?t_author/dbpedia-owl:birthDate" />
+                            <Param name="beginIndex" value="0" />
+                            <Param name="endIndex" value="3" />
+                        </TransformInput>
+                    </Compare>
+                    <!-- Compare authors death year -->
+                    <Compare metric="inequality" threshold="1">
+                        <TransformInput function="filterByRegex">
+                            <Input path="?s_author/dcterms:date" />
+                            <Param name="regex" value="[0-9]{4}$" />
+                        </TransformInput>
+                        <TransformInput function="substring">
+                            <Input path="?t_author/dbpedia-owl:deathDate" />
+                            <Param name="beginIndex" value="0" />
+                            <Param name="endIndex" value="3" />
+                        </TransformInput>
+                    </Compare>
+                </Aggregate>
+            </LinkageRule>
+            <Filter threshold="0.90"/>
+            <Outputs>
+                <Output type="file" minConfidence="0.995">
+                    <Param name="file" value="/home/luigi/p3-silk/silk-singlemachine/accepted_links.nt" />
+                    <Param name="format" value="ntriples" />
+                </Output>
+                <Output type="file" maxConfidence="0.50">
+                    <Param name="file" value="/home/luigi/p3-silk/silk-singlemachine/not_accepted_links.nt"/>
+                    <Param name="format" value="ntriples"/>
+                </Output>				            
+            </Outputs>
+        </Interlink>
+    </Interlinks>
+</Silk>
+
