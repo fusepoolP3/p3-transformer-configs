@@ -19,7 +19,7 @@
     </Prefixes>
     <DataSources>
         <DataSource id="source" type="file">
-            <Param name="file" value="/home/luigi/jena/jena-fuseki-1.1.1/Data/minerva-dataset.nt"/>
+            <Param name="file" value="inputdata.nt"/>
             <Param name="format" value="N-TRIPLES"/>
         </DataSource>
         <DataSource id="target" type="sparqlEndpoint">
@@ -88,13 +88,9 @@
             <Filter threshold="0.90"/>
             <Outputs>
                 <Output type="file" minConfidence="0.995">
-                    <Param name="file" value="/home/luigi/p3-silk/silk-singlemachine/accepted_links.nt" />
+                    <Param name="file" value="galileomuseum-dbpedia-linkset.nt" />
                     <Param name="format" value="ntriples" />
                 </Output>
-                <Output type="file" maxConfidence="0.50">
-                    <Param name="file" value="/home/luigi/p3-silk/silk-singlemachine/not_accepted_links.nt"/>
-                    <Param name="format" value="ntriples"/>
-                </Output>				            
             </Outputs>
         </Interlink>
     </Interlinks>
