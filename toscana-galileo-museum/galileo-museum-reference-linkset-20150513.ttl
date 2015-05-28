@@ -1,0 +1,124 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1: <dbpedia-owl> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+<http://minerva.atcult.it/rdf/002fd364-689f-3815-8b86-93da986cfaa7> a foaf:Person ;
+	foaf:name "Lessona, Michele" ;
+	dcterms:date "1823-1894" ;
+	owl:sameAs <http://dbpedia.org/resource/Michele_Lessona> .
+
+<http://minerva.atcult.it/rdf/00621228-1acf-3cb4-8664-a2c32ebb3a4e> a foaf:Person ;
+	foaf:name "Vittoria, Alessandro" ;
+	dcterms:date "1525-1608" ;
+	owl:sameAs <http://dbpedia.org/resource/Alessandro_Vittoria> .
+
+<http://minerva.atcult.it/rdf/007c9893-bdab-3543-8668-b7c8c6faed17> a foaf:Person ;
+	foaf:name "Morley, Edward Williams" ;
+	dcterms:date "1838-1923" ;
+	owl:sameAs <http://dbpedia.org/resource/Edward_Morley> .
+
+<http://minerva.atcult.it/rdf/00811a4d-7a2c-3c1f-915a-6efb21c4494d> a foaf:Person ;
+	foaf:name "Zittel, Karl Alfred von" ;
+	dcterms:date "1839-1904" ;
+	owl:sameAs <http://dbpedia.org/resource/Karl_Alfred_von_Zittel> .
+
+<http://minerva.atcult.it/rdf/0093f5ee-5baf-3228-a2f2-b7acd8e55ce3> a foaf:Person ;
+	foaf:name "Smeaton, John" ;
+	dcterms:date "1724-1792" ;
+	owl:sameAs <http://dbpedia.org/resource/John_Smeaton> .
+
+<http://minerva.atcult.it/rdf/00a025ef-430f-31c6-81d0-f201121e1b7b> a foaf:Person ;
+	foaf:name "Dijksterhuis, Eduard Jan" ;
+	dcterms:date "1892-1965" ;
+	owl:sameAs <http://dbpedia.org/resource/Eduard_Jan_Dijksterhuis> .
+
+<http://minerva.atcult.it/rdf/00a5b8d0-24e8-3590-aa22-b709f218f005> a foaf:Person ;
+	foaf:name "Knorr, Wilbur Richard" ;
+	dcterms:date "1945-1997" ;
+	owl:sameAs <http://dbpedia.org/resource/Wilbur_Knorr> .
+
+<http://minerva.atcult.it/rdf/00b48fb9-25d8-3f94-96ec-3f2348c9b136> a foaf:Person ;
+	foaf:name "Solaro della Margarita, Clemente" ;
+	dcterms:date "1792-1869" ;
+	owl:sameAs <http://dbpedia.org/resource/Clemente_Solaro,_Count_La_Margherita> .
+
+<http://minerva.atcult.it/rdf/00bda473-d24d-3216-890e-b7eeeb065bba> a foaf:Person ;
+	foaf:name "Thomas, Norman" ;
+	dcterms:date "1884-1968" ;
+	owl:sameAs <http://dbpedia.org/resource/Norman_Thomas> .
+
+<http://minerva.atcult.it/rdf/00c0d8a0-6b59-36a2-a461-01b3b37038cc> a foaf:Person ;
+	foaf:name "Forchhammer, Johan Georg" ;
+	dcterms:date "1794-1865" ;
+	owl:sameAs <http://dbpedia.org/resource/Johan_Georg_Forchhammer> .
+
+<http://minerva.atcult.it/rdf/00c1cb1e-b561-37ac-9415-0360da7a494e> a foaf:Person ;
+	foaf:name "Golgi, Camillo" ;
+	dcterms:date "1843-1926" ;
+	owl:sameAs <http://dbpedia.org/resource/Camillo_Golgi> .
+
+<http://minerva.atcult.it/rdf/00da4be1-2ac4-32d4-9032-b8b2554a3229> a foaf:Person ;
+	foaf:name "Ceva, Tommaso" ;
+	dcterms:date "1648-1737" ;
+	owl:sameAs <http://dbpedia.org/resource/Tommaso_Ceva> .
+
+<http://minerva.atcult.it/rdf/00edb3d3-6543-393c-8813-e024daa443dc> a foaf:Person ;
+	foaf:name "Ricci Curbastro, Gregorio" ;
+	dcterms:date "1853-1925" ;
+	owl:sameAs <http://dbpedia.org/resource/Gregorio_Ricci-Curbastro> .
+
+<http://minerva.atcult.it/rdf/00f6e3c6-d4bd-3ef2-be3e-7714a32f030b> a foaf:Person ;
+	foaf:name "Teichmeyer, Hermann Friedrich" ;
+	dcterms:date "1685-1744" ;
+	owl:sameAs <http://dbpedia.org/resource/Hermann_Friedrich_Teichmeyer> .
+
+<http://minerva.atcult.it/rdf/0100bb37-7f09-36a2-b0f8-e4efd13797b0> a foaf:Person ;
+	foaf:name "Blackett, Patrick Maynard Stuart" ;
+	dcterms:date "1897-1974" ;
+	owl:sameAs <http://dbpedia.org/resource/Patrick_Blackett,_Baron_Blackett> .
+
+<http://minerva.atcult.it/rdf/010108a7-f704-35d6-9c2b-bb0eaac4e518> a foaf:Person ;
+	foaf:name "Turner, Dawson" ;
+	dcterms:date "1775-1858" ;
+	owl:sameAs <http://dbpedia.org/resource/Dawson_Turner> .
+
+<http://minerva.atcult.it/rdf/010d0234-5dd5-3189-bf49-d92aaad362f4> a foaf:Person ;
+	foaf:name "Watson, William" ;
+	dcterms:date "1715-1787" ;
+	owl:sameAs <http://dbpedia.org/resource/William_Watson_(scientist)> .
+
+<http://minerva.atcult.it/rdf/0112eb96-cbd2-3cdd-8038-5c653a8e3fab> a foaf:Person ;
+	foaf:name "Casey, John" ;
+	dcterms:date "1820-1891" ;
+	owl:sameAs <http://dbpedia.org/resource/John_Casey_(mathematician)> .
+
+<http://minerva.atcult.it/rdf/011a1775-c5e0-39cb-9960-6c1d08ec02b1> a foaf:Person ;
+	foaf:name "Patin, Guy" ;
+	dcterms:date "1601-1672" ;
+	owl:sameAs <http://dbpedia.org/resource/Guy_Patin> .
+
+<http://minerva.atcult.it/rdf/01319e71-0a12-37b1-b890-bc8442b76e96> a foaf:Person ;
+	foaf:name "Romé de L'Isle, Jean Baptiste Louis de" ;
+	dcterms:date "1736-1790" ;
+	owl:sameAs <http://dbpedia.org/resource/Jean-Baptiste_L._Rom%C3%A9_de_l'Isle> .
+
+<http://minerva.atcult.it/rdf/01341a0b-2092-3ce6-a742-826d87cb4cd0> a foaf:Person ;
+	foaf:name "Thomson, J. Arthur" ;
+	dcterms:date "1861-1933" ;
+	owl:sameAs <http://dbpedia.org/resource/John_Arthur_Thomson> .
+
+<http://minerva.atcult.it/rdf/01364cef-0263-3a94-8e92-1a241d3ae4e9> a foaf:Person ;
+	foaf:name "Perrey, Alexis" ;
+	dcterms:date "1808-1882" ;
+	owl:sameAs <http://dbpedia.org/resource/Alexis_Perrey> .
+
+<http://minerva.atcult.it/rdf/0149dc43-0927-3ae9-a5f4-47f6ef22ec89> a foaf:Person ;
+	foaf:name "Soane, John" ;
+	dcterms:date "1753-1837" ;
+	owl:sameAs <http://dbpedia.org/resource/John_Soane> .
